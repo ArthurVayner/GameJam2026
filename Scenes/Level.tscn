@@ -53,3 +53,13 @@ height = 3.0
 position = Vector2(82, 23)
 width = 32.0
 height = 5.0
+
+[node name="Platform11" parent="." unique_id=835498454 instance=ExtResource("1_0ba56")]
+position = Vector2(170, 135)
+width = 9.0
+height = 328.0
+
+[node name="Platform11" parent="Platform11" unique_id=308198204 instance=ExtResource("1_0ba56")]
+position = Vector2(-178, -17)
+width = 9.0
+height = 328.0
