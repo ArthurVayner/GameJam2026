@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://rjfixp4fo8ft"]
+
+[ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_0ba56"]
+
+[node name="Level" type="Node2D" unique_id=462795862]
+
+[node name="Platform1" parent="." unique_id=1291661622 instance=ExtResource("1_0ba56")]
+position = Vector2(94, 126)
+width = 24.0
+height = 4.0
+
+[node name="Platform2" parent="." unique_id=1131836770 instance=ExtResource("1_0ba56")]
+position = Vector2(29, 123)
+width = 20.0
+height = 5.0
+
+[node name="Platform3" parent="." unique_id=1667550640 instance=ExtResource("1_0ba56")]
+position = Vector2(53, 140)
+width = 500.0
+height = 10.0
+
+[node name="Platform4" parent="." unique_id=2054953105 instance=ExtResource("1_0ba56")]
+position = Vector2(10, 89)
+width = 18.0
+height = 7.0
+
+[node name="Platform5" parent="." unique_id=1625163000 instance=ExtResource("1_0ba56")]
+position = Vector2(59, 101)
+width = 13.0
+height = 8.0
+
+[node name="Platform6" parent="." unique_id=1644594669 instance=ExtResource("1_0ba56")]
+position = Vector2(139, 109)
+width = 32.0
+height = 5.0
+
+[node name="Platform7" parent="." unique_id=689106217 instance=ExtResource("1_0ba56")]
+position = Vector2(95, 84)
+width = 20.0
+height = 5.0
+
+[node name="Platform8" parent="." unique_id=2890554 instance=ExtResource("1_0ba56")]
+position = Vector2(39, 57)
+width = 20.0
+height = 5.0
+
+[node name="Platform9" parent="." unique_id=473625262 instance=ExtResource("1_0ba56")]
+position = Vector2(136, 54)
+width = 20.0
+height = 3.0
+
+[node name="Platform10" parent="." unique_id=1631709851 instance=ExtResource("1_0ba56")]
+position = Vector2(82, 23)
+width = 32.0
+height = 5.0
