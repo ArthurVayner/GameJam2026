@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b31r4030t1cl7"]
+
+[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://GameJab2026/icon.svg" id="1_bagtx"]
+
+[node name="Player" type="Node2D" unique_id=1816740253]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1169303563]
+position = Vector2(527, 302)
+texture = ExtResource("1_bagtx")
