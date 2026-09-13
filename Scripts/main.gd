@@ -41,12 +41,11 @@ func spawneBird() -> void:
 	
 	var new_bird = bird_scene.instantiate()
 	new_bird.spanBirdAwayFromPlayer(player.position,direction * 100, yPositionOffset)
-	print("spawneBird 77we")
-
 	add_child(new_bird)
 
 func _on_bird_timer_timeout() -> void:
 	var birdsAmount : int= [1,1,1,2,2,3].pick_random()
+	print("spawneBird amount=",birdsAmount)
 	for i in range(0, birdsAmount): 
 		spawneBird()
 	reset_bird_timer()
