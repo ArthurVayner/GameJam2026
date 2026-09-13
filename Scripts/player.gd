@@ -13,8 +13,8 @@ extends CharacterBody2D
 
 
 
-const WALK_SPEED = 100.0
-const JUMP_VELOCITY = -300.0
+@export var WALK_SPEED = 100.0
+@export var JUMP_VELOCITY = -300.0
 const ACCELERATION = 1500.0
 const FRICTION = 400.0
 

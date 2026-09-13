@@ -21,7 +21,7 @@ shape = SubResource("RectangleShape2D_ygmfd")
 stream = ExtResource("3_dnvpi")
 volume_db = 10.0
 autoplay = true
-max_distance = 52.0
+max_distance = 100.0
 
 [node name="FlappingSoundTimer" type="Timer" parent="." unique_id=1759071215]
 
