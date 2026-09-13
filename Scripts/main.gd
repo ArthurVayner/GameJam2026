@@ -44,7 +44,7 @@ func spawneBird() -> void:
 	add_child(new_bird)
 
 func _on_bird_timer_timeout() -> void:
-	var birdsAmount : int= [2,2,3].pick_random()
+	var birdsAmount : int= [1,1,1,2,2,3].pick_random()
 	for i in range(0, birdsAmount): 
 		spawneBird()
 	reset_bird_timer()
