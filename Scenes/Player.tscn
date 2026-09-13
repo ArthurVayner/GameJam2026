@@ -7,15 +7,15 @@
 [ext_resource type="AudioStream" uid="uid://bmy1pu6cuc7jf" path="res://Assets/Player/Jack_hit_by_rock_or_whatever.wav" id="5_5ixxa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n6tw8"]
-radius = 3.1999998
-height = 8.4
+radius = 4.0
+height = 12.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2015687368]
 script = ExtResource("1_gntrk")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1169303563]
-position = Vector2(0, -2.9802322e-08)
-scale = Vector2(0.06757813, 0.068359375)
+position = Vector2(-0.16250005, -1.1920929e-07)
+scale = Vector2(0.06503907, 0.09375)
 texture = ExtResource("1_kyqiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461626614]
@@ -31,7 +31,7 @@ texture = ExtResource("1_kyqiw")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="." unique_id=778852630]
 stream = ExtResource("3_gntrk")
-volume_db = 1.0
+volume_db = -8.538
 
 [node name="WalkSFX" type="AudioStreamPlayer2D" parent="." unique_id=371871590]
 stream = ExtResource("4_dewec")
