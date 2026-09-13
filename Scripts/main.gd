@@ -12,7 +12,7 @@ var falling_object_offset: int = 200
 var falling_object_interval: int = 2
 
 func reset_bird_timer() -> void:
-	bird_timer.start(randf_range(2,7))
+	bird_timer.start(randf_range(2,3))
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,6 +22,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print(player.position.y)
 	pass
 
 
@@ -38,13 +39,13 @@ func spawneBird() -> void:
 	var direction = [1,-1].pick_random()
 	new_bird.direction= direction
 	
-	var yPosition = max(player.position.y + randf_range(-50, 50), 0)
+	var yPosition = min(player.position.y + randf_range(-40, 40), 555)
 	var xPosition = player.position.x - direction * 100
 	new_bird.position = Vector2(xPosition, yPosition)
 	add_child(new_bird)
 
 func _on_bird_timer_timeout() -> void:
-	var birdsAmount : int= [1,1,1,2,2,3].pick_random()
+	var birdsAmount : int= [2,2,3].pick_random()
 	for i in range(0, birdsAmount): 
 		spawneBird()
 	reset_bird_timer()
