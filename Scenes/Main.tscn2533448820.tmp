@@ -2,15 +2,29 @@
 
 [ext_resource type="Script" uid="uid://dc2ym1h10t5o2" path="res://Scripts/main.gd" id="1_pbw6q"]
 [ext_resource type="Script" uid="uid://cks2as4f3rw3o" path="res://Scripts/camera_2d.gd" id="2_v1gob"]
-[ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://o7jkida1e3y1" path="res://Scripts/player.gd" id="3_jw32o"]
+[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="4_50glp"]
 [ext_resource type="PackedScene" uid="uid://rjfixp4fo8ft" path="res://Scenes/Level.tscn" id="5_vy5pj"]
 [ext_resource type="PackedScene" uid="uid://bhdtyt6xtb1ug" path="res://Scenes/Border.tscn" id="6_v1gob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epeh6"]
+size = Vector2(8, 8)
 
 [node name="Main" type="Node2D" unique_id=376487417]
 script = ExtResource("1_pbw6q")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1511300039]
 script = ExtResource("2_v1gob")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1108929980]
+script = ExtResource("3_jw32o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1107394305]
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("4_50glp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1214846212]
+shape = SubResource("RectangleShape2D_epeh6")
 
 [node name="Level" parent="." unique_id=462795862 instance=ExtResource("5_vy5pj")]
 position = Vector2(-75, -72)
@@ -19,10 +33,5 @@ position = Vector2(-75, -72)
 
 [node name="Border" parent="." unique_id=483146374 instance=ExtResource("6_v1gob")]
 position = Vector2(-15, 74)
-speed = 0.0
-speedup = 0.0
-
-[node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
-position = Vector2(0, 58)
 
 [connection signal="timeout" from="FallingObjTimer" to="." method="_on_falling_obj_timer_timeout"]

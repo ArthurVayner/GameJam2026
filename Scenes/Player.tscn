@@ -1,19 +1,29 @@
 [gd_scene format=3 uid="uid://b31r4030t1cl7"]
 
+[ext_resource type="Script" uid="uid://o7jkida1e3y1" path="res://Scripts/player.gd" id="1_gntrk"]
 [ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="1_kyqiw"]
-[ext_resource type="Script" uid="uid://drqipwoeoy7w" path="res://Scripts/Player_Controller.gd" id="2_gntrk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n6tw8"]
-height = 24.0
+radius = 3.1999998
+height = 8.4
 
-[node name="Player" type="Node2D" unique_id=1816740253]
+[node name="Player" type="CharacterBody2D" unique_id=2015687368]
+script = ExtResource("1_gntrk")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1169303563]
-scale = Vector2(0.2, 0.2)
+position = Vector2(0, -2.9802322e-08)
+scale = Vector2(0.06757813, 0.068359375)
 texture = ExtResource("1_kyqiw")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1190015344]
-script = ExtResource("2_gntrk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=461626614]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461626614]
 shape = SubResource("CapsuleShape2D_n6tw8")
+
+[node name="StunTimer" type="Timer" parent="." unique_id=1913667496]
+
+[node name="StunEffect" type="Sprite2D" parent="." unique_id=783387572]
+visible = false
+position = Vector2(0, -6)
+scale = Vector2(0.0625, 0.015625)
+texture = ExtResource("1_kyqiw")
+
+[connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]

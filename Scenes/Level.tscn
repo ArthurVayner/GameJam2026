@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://rjfixp4fo8ft"]
 
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_0ba56"]
-[ext_resource type="PackedScene" uid="uid://bhdtyt6xtb1ug" path="res://Scenes/Border.tscn" id="3_8rbpu"]
 
 [node name="Level" type="Node2D" unique_id=462795862]
-
-[node name="Border" parent="." unique_id=483146374 instance=ExtResource("3_8rbpu")]
-position = Vector2(64, 150)
 
 [node name="Platforms" type="Node2D" parent="." unique_id=827001060]
 

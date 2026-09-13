@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="2_w854r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(9, 9)
 
 [node name="FallingObject" type="Area2D" unique_id=1148525669]
 script = ExtResource("1_7geer")
@@ -12,6 +13,7 @@ script = ExtResource("1_7geer")
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1685695508]
+scale = Vector2(0.0703125, 0.0703125)
 texture = ExtResource("2_w854r")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

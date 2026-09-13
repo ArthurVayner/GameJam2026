@@ -1,7 +1,9 @@
 extends Area2D
 
 
-@export var speed = 0.05
+@export var speed: float = 0.05
+@export var speedup: float = 0.05
+@export var speedup_interval: int = 2
 @onready var speed_up_timer: Timer = $SpeedUpTimer
 
 
@@ -9,7 +11,7 @@ func _process(_delta: float) -> void:
 	self.position.y -= speed
 	
 func _ready() -> void:
-	speed_up_timer.start(2)
+	speed_up_timer.start(speedup_interval)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
@@ -18,5 +20,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_speed_up_timer_timeout() -> void:
 	print("border boosted")
-	speed += 0.05
-	speed_up_timer.start(2)
+	speed += speedup
+	speed_up_timer.start(speedup_interval)
