@@ -4,6 +4,9 @@ extends Camera2D
 
 @export var smooth_speed: float = 5.0
 
+const maxLeft = -195
+const maxRight = 140
+
 func die():
 	print("11")
 	get_tree().reload_current_scene()
@@ -16,7 +19,9 @@ func calculatePosition(curent:float,target:float,delta:float) ->float:
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position.x= calculatePosition(global_position.x, player.global_position.x, delta)
+	var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
+	#clamp(value: Variant, min: Variant, max: Variant)
+	global_position.x= clamp(fallowPlayerPosition, maxLeft, maxRight)
 	global_position.y= calculatePosition(global_position.y, player.global_position.y, delta)
 	
 	
