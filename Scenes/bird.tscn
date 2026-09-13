@@ -1,0 +1,28 @@
+<<<<<<< Updated upstream
+[gd_scene format=3 uid="uid://cgl01txhrutwy"]
+
+[ext_resource type="Texture2D" path="res://bird.png" id="1_i8bdw"]
+[ext_resource type="Script" path="res://Scenes/bird.gd" id="1_mcegt"]
+=======
+[gd_scene format=3 uid="uid://b0lhmn3v2nhil"]
+
+[ext_resource type="Texture2D" uid="uid://by0e42830pk6w" path="res://bird.png" id="1_i8bdw"]
+[ext_resource type="Script" uid="uid://b2p0i77falbmd" path="res://Scenes/bird.gd" id="1_mcegt"]
+>>>>>>> Stashed changes
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygmfd"]
+size = Vector2(14, 12)
+
+[node name="Bird" type="Node2D" unique_id=896752602]
+
+[node name="bird" type="Area2D" parent="." unique_id=1060939014]
+script = ExtResource("1_mcegt")
+
+[node name="Sprite2D" type="Sprite2D" parent="bird" unique_id=492606444]
+scale = Vector2(0.101, 0.1)
+texture = ExtResource("1_i8bdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bird" unique_id=1653949590]
+shape = SubResource("RectangleShape2D_ygmfd")
+
+[connection signal="body_entered" from="bird" to="bird" method="_on_body_entered"]
