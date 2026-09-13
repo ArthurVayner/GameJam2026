@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	var a= calculatePosition(global_position.y, player.global_position.y, delta)
 	global_position.y= min(a,maxCemaraYPostion)
 	maxCemaraYPostion = global_position.y
-	print(global_position.y )
+	#print(global_position.y )
 	if global_position.y - player.global_position.y <-100:
 		die()
 	

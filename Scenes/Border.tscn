@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bhdtyt6xtb1ug"]
+
+[ext_resource type="Script" uid="uid://daou5f2ovbqn5" path="res://Scripts/border.gd" id="1_2u8f6"]
+[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="2_ls51j"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g4v7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls51j"]
+size = Vector2(551, 101)
+
+[node name="Border" type="Area2D" unique_id=483146374]
+modulate = Color(0, 0, 0, 1)
+script = ExtResource("1_2u8f6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1735023337]
+modulate = Color(0, 0, 0, 1)
+visibility_layer = 2
+material = SubResource("CanvasItemMaterial_g4v7s")
+position = Vector2(-8.5, 50.5)
+shape = SubResource("RectangleShape2D_ls51j")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1372681508]
+position = Vector2(1.335144e-05, 2.3841858e-06)
+scale = Vector2(4.3203125, 0.78906256)
+texture = ExtResource("2_ls51j")
+
+[node name="SpeedUpTimer" type="Timer" parent="." unique_id=2092766371]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="SpeedUpTimer" to="." method="_on_speed_up_timer_timeout"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rjfixp4fo8ft"]
 
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_0ba56"]
+[ext_resource type="PackedScene" uid="uid://bhdtyt6xtb1ug" path="res://Scenes/Border.tscn" id="3_8rbpu"]
 
 [node name="Level" type="Node2D" unique_id=462795862]
 
@@ -108,3 +109,18 @@ height = 5.0
 position = Vector2(-124, 76)
 width = 20.0
 height = 5.0
+
+[node name="Border" parent="." unique_id=483146374 instance=ExtResource("3_8rbpu")]
+position = Vector2(64, 150)
+
+[node name="Platform22" parent="." unique_id=508870332 instance=ExtResource("1_0ba56")]
+position = Vector2(-203, -106)
+rotation = -1.5707964
+width = 500.0
+height = 10.0
+
+[node name="Platform23" parent="." unique_id=2144006717 instance=ExtResource("1_0ba56")]
+position = Vector2(307, -106)
+rotation = -1.5707964
+width = 500.0
+height = 10.0
