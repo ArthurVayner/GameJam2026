@@ -6,7 +6,7 @@ extends StaticBody2D
 		color = value
 		if is_node_ready() and polygon_2d:
 			print()
-			#polygon_2d.color = color
+			polygon_2d.color = color
 
 @export var width: float =100.0:
 	set(value):
@@ -31,6 +31,7 @@ var onStand = func (body:Player) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setSize()
+	polygon_2d.color = color
 	
 	
 func setSize()-> void:

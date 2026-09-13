@@ -1,21 +1,16 @@
-@tool
 extends "res://Scripts/Platform.gd"
+const BIRD = preload("res://Scripts/Platform.gd")
 
-const BIRD = preload("res://Scenes/bird.tscn")
-@onready var detection_area: Area2D = $DetectionArea
-
+@export var platform_color: Color = Color(0.35, 0.75, 1.0)
+@export var bird_direction: int = 1
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	color = Color("D1EAEB")
-	onStand = func (body:Player) -> void:
-		print("player is on me111")
-	pass
-	super._ready()
+	print("ttt")
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	

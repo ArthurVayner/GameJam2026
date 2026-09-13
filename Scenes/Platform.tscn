@@ -5,12 +5,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pquxj"]
 size = Vector2(100, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_epeh6"]
-size = Vector2(100, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n7cf"]
+size = Vector2(99, 2)
 
 [node name="Platform" type="StaticBody2D" unique_id=1291661622]
 script = ExtResource("1_pquxj")
-color = null
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1346095306]
 color = Color(0, 0.98039216, 0.6039216, 1)
@@ -22,6 +21,8 @@ shape = SubResource("RectangleShape2D_pquxj")
 [node name="DetectionArea" type="Area2D" parent="." unique_id=646678644]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1561203732]
-shape = SubResource("RectangleShape2D_epeh6")
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_8n7cf")
+debug_color = Color(1, 0, 0, 0.4)
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
