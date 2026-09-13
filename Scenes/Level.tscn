@@ -5,121 +5,123 @@
 
 [node name="Level" type="Node2D" unique_id=462795862]
 
-[node name="Platform1" parent="." unique_id=1291661622 instance=ExtResource("1_0ba56")]
+[node name="Border" parent="." unique_id=483146374 instance=ExtResource("3_8rbpu")]
+position = Vector2(64, 150)
+
+[node name="Platforms" type="Node2D" parent="." unique_id=827001060]
+
+[node name="Platform1" parent="Platforms" unique_id=1291661622 instance=ExtResource("1_0ba56")]
 position = Vector2(94, 126)
 width = 24.0
 height = 4.0
 
-[node name="Platform2" parent="." unique_id=1131836770 instance=ExtResource("1_0ba56")]
+[node name="Platform2" parent="Platforms" unique_id=1131836770 instance=ExtResource("1_0ba56")]
 position = Vector2(-8, 116)
 width = 20.0
 height = 5.0
 
-[node name="Platform3" parent="." unique_id=1667550640 instance=ExtResource("1_0ba56")]
+[node name="Platform3" parent="Platforms" unique_id=1667550640 instance=ExtResource("1_0ba56")]
 position = Vector2(53, 140)
 width = 500.0
 height = 10.0
 
-[node name="Platform4" parent="." unique_id=2054953105 instance=ExtResource("1_0ba56")]
+[node name="Platform4" parent="Platforms" unique_id=2054953105 instance=ExtResource("1_0ba56")]
 position = Vector2(-14, 70)
 width = 18.0
 height = 7.0
 
-[node name="Platform5" parent="." unique_id=1625163000 instance=ExtResource("1_0ba56")]
+[node name="Platform5" parent="Platforms" unique_id=1625163000 instance=ExtResource("1_0ba56")]
 position = Vector2(51, 85)
 width = 13.0
 height = 8.0
 
-[node name="Platform6" parent="." unique_id=1644594669 instance=ExtResource("1_0ba56")]
+[node name="Platform6" parent="Platforms" unique_id=1644594669 instance=ExtResource("1_0ba56")]
 position = Vector2(139, 109)
 width = 32.0
 height = 5.0
 
-[node name="Platform7" parent="." unique_id=689106217 instance=ExtResource("1_0ba56")]
+[node name="Platform7" parent="Platforms" unique_id=689106217 instance=ExtResource("1_0ba56")]
 position = Vector2(107, 85)
 width = 20.0
 height = 5.0
 
-[node name="Platform8" parent="." unique_id=2890554 instance=ExtResource("1_0ba56")]
+[node name="Platform8" parent="Platforms" unique_id=2890554 instance=ExtResource("1_0ba56")]
 position = Vector2(14, 53)
 width = 20.0
 height = 5.0
 
-[node name="Platform9" parent="." unique_id=473625262 instance=ExtResource("1_0ba56")]
+[node name="Platform9" parent="Platforms" unique_id=473625262 instance=ExtResource("1_0ba56")]
 position = Vector2(136, 54)
 width = 20.0
 height = 3.0
 
-[node name="Platform10" parent="." unique_id=1631709851 instance=ExtResource("1_0ba56")]
+[node name="Platform10" parent="Platforms" unique_id=1631709851 instance=ExtResource("1_0ba56")]
 position = Vector2(-16, 17)
 width = 32.0
 height = 5.0
 
-[node name="Platform11" parent="." unique_id=1422013303 instance=ExtResource("1_0ba56")]
+[node name="Platform11" parent="Platforms" unique_id=1422013303 instance=ExtResource("1_0ba56")]
 position = Vector2(-82, 35)
 width = 20.0
 height = 5.0
 
-[node name="Platform12" parent="." unique_id=1615777634 instance=ExtResource("1_0ba56")]
+[node name="Platform12" parent="Platforms" unique_id=1615777634 instance=ExtResource("1_0ba56")]
 position = Vector2(-73, 102)
 width = 20.0
 height = 5.0
 
-[node name="Platform13" parent="." unique_id=1577898995 instance=ExtResource("1_0ba56")]
+[node name="Platform13" parent="Platforms" unique_id=1577898995 instance=ExtResource("1_0ba56")]
 position = Vector2(96, -36)
 width = 20.0
 height = 5.0
 
-[node name="Platform14" parent="." unique_id=74140032 instance=ExtResource("1_0ba56")]
+[node name="Platform14" parent="Platforms" unique_id=74140032 instance=ExtResource("1_0ba56")]
 position = Vector2(168, 34)
 width = 20.0
 height = 5.0
 
-[node name="Platform15" parent="." unique_id=1654319301 instance=ExtResource("1_0ba56")]
+[node name="Platform15" parent="Platforms" unique_id=1654319301 instance=ExtResource("1_0ba56")]
 position = Vector2(240, 87)
 width = 20.0
 height = 5.0
 
-[node name="Platform16" parent="." unique_id=725404685 instance=ExtResource("1_0ba56")]
+[node name="Platform16" parent="Platforms" unique_id=725404685 instance=ExtResource("1_0ba56")]
 position = Vector2(129, 10)
 width = 20.0
 height = 5.0
 
-[node name="Platform17" parent="." unique_id=898506641 instance=ExtResource("1_0ba56")]
+[node name="Platform17" parent="Platforms" unique_id=898506641 instance=ExtResource("1_0ba56")]
 position = Vector2(54, -27)
 width = 20.0
 height = 5.0
 
-[node name="Platform18" parent="." unique_id=118852896 instance=ExtResource("1_0ba56")]
+[node name="Platform18" parent="Platforms" unique_id=118852896 instance=ExtResource("1_0ba56")]
 position = Vector2(-16, -17)
 width = 20.0
 height = 5.0
 
-[node name="Platform19" parent="." unique_id=900843173 instance=ExtResource("1_0ba56")]
+[node name="Platform19" parent="Platforms" unique_id=900843173 instance=ExtResource("1_0ba56")]
 position = Vector2(51, -83)
 width = 20.0
 height = 5.0
 
-[node name="Platform20" parent="." unique_id=86725948 instance=ExtResource("1_0ba56")]
+[node name="Platform20" parent="Platforms" unique_id=86725948 instance=ExtResource("1_0ba56")]
 position = Vector2(19, -62)
 width = 20.0
 height = 5.0
 
-[node name="Platform21" parent="." unique_id=931543066 instance=ExtResource("1_0ba56")]
+[node name="Platform21" parent="Platforms" unique_id=931543066 instance=ExtResource("1_0ba56")]
 position = Vector2(-124, 76)
 width = 20.0
 height = 5.0
 
-[node name="Border" parent="." unique_id=483146374 instance=ExtResource("3_8rbpu")]
-position = Vector2(64, 150)
-
-[node name="Platform22" parent="." unique_id=508870332 instance=ExtResource("1_0ba56")]
+[node name="Platform22" parent="Platforms" unique_id=508870332 instance=ExtResource("1_0ba56")]
 position = Vector2(-203, -106)
 rotation = -1.5707964
 width = 500.0
 height = 10.0
 
-[node name="Platform23" parent="." unique_id=2144006717 instance=ExtResource("1_0ba56")]
+[node name="Platform23" parent="Platforms" unique_id=2144006717 instance=ExtResource("1_0ba56")]
 position = Vector2(307, -106)
 rotation = -1.5707964
 width = 500.0
