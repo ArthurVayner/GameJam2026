@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://rjfixp4fo8ft"]
 
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_0ba56"]
-[ext_resource type="Script" path="res://Scenes/bird.gd" id="3_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://d0w1bn31ck55y" path="res://Scenes/bird.tscn" id="3_fuudy"]
 
 [node name="Level" type="Node2D" unique_id=462795862]
@@ -127,7 +126,6 @@ height = 10.0
 
 [node name="Bird" parent="." unique_id=896752602 instance=ExtResource("3_fuudy")]
 position = Vector2(-80, 123)
-script = ExtResource("3_8rbpu")
 
 [node name="Platforms2" type="Node2D" parent="." unique_id=1006726546]
 position = Vector2(0, -230)
