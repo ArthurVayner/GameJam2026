@@ -8,9 +8,9 @@ var speed = 140.0
 
 func spanBirdAwayFromPlayer(player_position: Vector2, distance: float, yPositionOffset: float)-> void:
 	direction = -sign(distance)
-	var yPosition = min(player_position.y + yPositionOffset, 55)
+	var yPosition = player_position.y + yPositionOffset
 	var xPosition = player_position.x + distance
-	position = Vector2(xPosition, yPosition)
+	global_position = Vector2(xPosition, yPosition)
 	pass
 
 # Called when the node enters the scene tree for the first time.

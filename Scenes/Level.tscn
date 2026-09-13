@@ -240,5 +240,9 @@ width = 20.0
 height = 5.0
 
 [node name="BirdSpawnPlatform2" parent="." unique_id=1861088920 instance=ExtResource("1_8rbpu")]
-position = Vector2(179, 90)
+position = Vector2(74, 50)
+direction = -1
+
+[node name="BirdSpawnPlatform2" parent="BirdSpawnPlatform2" unique_id=1653441764 instance=ExtResource("1_8rbpu")]
+position = Vector2(-37, -55)
 direction = -1
