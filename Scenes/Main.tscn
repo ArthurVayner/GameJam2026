@@ -25,4 +25,7 @@ speedup = 0.0
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
 position = Vector2(0, 58)
 
+[node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
+
 [connection signal="timeout" from="FallingObjTimer" to="." method="_on_falling_obj_timer_timeout"]
+[connection signal="timeout" from="BirdTimer" to="." method="_on_bird_timer_timeout"]
