@@ -4,10 +4,16 @@ extends CharacterBody2D
 @onready var stun_timer: Timer = $StunTimer
 @onready var stun_effect: Sprite2D = $StunEffect
 
-const SPEED = 100.0
+const WALK_SPEED = 100.0
 const JUMP_VELOCITY = -300.0
+const ACCELERATION = 600.0
+const FRICTION = 400.0
 
 var can_move: bool = true
+
+func give_knockback(value:Vector2) -> void:
+	print(1)
+	velocity = value
 
 
 func _physics_process(delta: float) -> void:
@@ -21,14 +27,13 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	if can_move:
-		var direction := Input.get_axis("ui_left", "ui_right")
-		if direction:
-			velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction and can_move:
+		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, ACCELERATION * delta)
 	else:
-		velocity.x = 0
+		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
+		
 	move_and_slide()
 
 	
