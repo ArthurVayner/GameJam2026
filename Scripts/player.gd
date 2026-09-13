@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 const WALK_SPEED = 100.0
 const JUMP_VELOCITY = -300.0
-const ACCELERATION = 600.0
+const ACCELERATION = 2000.0
 const FRICTION = 400.0
 
 var can_move: bool = true
