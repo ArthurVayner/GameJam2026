@@ -16,7 +16,7 @@ func reset_bird_timer() -> void:
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	falling_obj_timer.start(falling_object_interval)
+	spawn_falling_object()
 	reset_bird_timer()
 
 
@@ -24,6 +24,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
+func spawn_falling_object() -> void:
+	falling_obj_timer.start(falling_object_interval)
 
 func _on_falling_obj_timer_timeout() -> void:
 	var object = falling_object.instantiate()
