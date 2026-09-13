@@ -5,6 +5,7 @@ const BIRD = preload("res://Scripts/Platform.gd")
 @export var bird_direction: int = 1
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("ttt")
