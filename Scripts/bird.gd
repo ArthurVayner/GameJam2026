@@ -3,9 +3,15 @@ extends Area2D
 @onready var flapping_sound: AudioStreamPlayer2D = $FlappingSound
 @onready var flapping_sound_timer: Timer = $FlappingSoundTimer
 
-
 var direction: int = 1
 var speed = 140.0
+
+func spanBirdAwayFromPlayer(player_position: Vector2, distance: float, yPositionOffset: float)-> void:
+	direction = -sign(distance)
+	var yPosition = player_position.y + yPositionOffset
+	var xPosition = player_position.x + distance
+	global_position = Vector2(xPosition, yPosition)
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

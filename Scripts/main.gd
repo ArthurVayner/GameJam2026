@@ -36,17 +36,16 @@ func _on_falling_obj_timer_timeout() -> void:
 
 
 func spawneBird() -> void:
-	var new_bird = bird_scene .instantiate()
 	var direction = [1,-1].pick_random()
-	new_bird.direction= direction
+	var yPositionOffset = randf_range(-40, 40)
 	
-	var yPosition = min(player.position.y + randf_range(-40, 40), 55)
-	var xPosition = player.position.x - direction * 100
-	new_bird.position = Vector2(xPosition, yPosition)
+	var new_bird = bird_scene.instantiate()
+	new_bird.spanBirdAwayFromPlayer(player.position,direction * 100, yPositionOffset)
 	add_child(new_bird)
 
 func _on_bird_timer_timeout() -> void:
 	var birdsAmount : int= [1,1,1,2,2,3].pick_random()
+	print("spawneBird amount=",birdsAmount)
 	for i in range(0, birdsAmount): 
 		spawneBird()
 	reset_bird_timer()
