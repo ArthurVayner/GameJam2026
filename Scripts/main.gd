@@ -38,7 +38,7 @@ func spawneBird() -> void:
 	var direction = [1,-1].pick_random()
 	new_bird.direction= direction
 	
-	var yPosition = max(player.position.y + randf_range(-50, 50), 0)
+	var yPosition = min(player.position.y + randf_range(-40, 40), 55)
 	var xPosition = player.position.x - direction * 100
 	new_bird.position = Vector2(xPosition, yPosition)
 	add_child(new_bird)
