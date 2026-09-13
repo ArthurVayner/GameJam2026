@@ -10,7 +10,7 @@ const maxLeft = -195
 const maxRight = 140
 const camera_y_offset = 35
 const camera_x_offset = -2.5
-const camera_acceleration = 0.05
+const camera_acceleration = 0.005
 
 var camera_speed = 0
 var is_cutscene: bool = true

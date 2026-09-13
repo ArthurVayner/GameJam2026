@@ -363,3 +363,35 @@ position = Vector2(307, -106)
 rotation = -1.5707964
 width = 500.0
 height = 10.0
+
+[node name="Platform3" parent="." unique_id=1378614837 instance=ExtResource("1_0ba56")]
+visible = false
+position = Vector2(-194, -92)
+rotation = 1.5707964
+scale = Vector2(37.817295, 1.9422277)
+width = 500.0
+height = 10.0
+
+[node name="Platform25" parent="." unique_id=1186483054 instance=ExtResource("1_0ba56")]
+visible = false
+position = Vector2(-194, -508)
+rotation = 1.5707964
+scale = Vector2(37.817295, 1.9422277)
+width = 500.0
+height = 10.0
+
+[node name="Platform26" parent="." unique_id=1073290626 instance=ExtResource("1_0ba56")]
+visible = false
+position = Vector2(211.99998, -92.00001)
+rotation = 1.5707964
+scale = Vector2(37.817295, 1.9422277)
+width = 500.0
+height = 10.0
+
+[node name="Platform27" parent="." unique_id=543269271 instance=ExtResource("1_0ba56")]
+visible = false
+position = Vector2(214, -508)
+rotation = 1.5707964
+scale = Vector2(37.817295, 1.9422277)
+width = 500.0
+height = 10.0
