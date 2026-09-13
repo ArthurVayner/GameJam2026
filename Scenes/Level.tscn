@@ -1,126 +1,153 @@
 [gd_scene format=3 uid="uid://rjfixp4fo8ft"]
 
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_0ba56"]
+[ext_resource type="PackedScene" uid="uid://chaxy0kndls4h" path="res://Scenes/BirdSpawnPlatform.tscn" id="1_8rbpu"]
 [ext_resource type="PackedScene" uid="uid://d0w1bn31ck55y" path="res://Scenes/bird.tscn" id="3_fuudy"]
 
 [node name="Level" type="Node2D" unique_id=462795862]
+
+[node name="BirdSpawnPlatform" parent="." unique_id=916455241 instance=ExtResource("1_8rbpu")]
+position = Vector2(67, 107)
 
 [node name="Platforms" type="Node2D" parent="." unique_id=827001060]
 
 [node name="Platform1" parent="Platforms" unique_id=1291661622 instance=ExtResource("1_0ba56")]
 position = Vector2(104, 126)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 24.0
 height = 4.0
 
 [node name="Platform2" parent="Platforms" unique_id=1131836770 instance=ExtResource("1_0ba56")]
 position = Vector2(-8, 116)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform3" parent="Platforms" unique_id=1667550640 instance=ExtResource("1_0ba56")]
 position = Vector2(53, 140)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 500.0
 height = 10.0
 
 [node name="Platform4" parent="Platforms" unique_id=2054953105 instance=ExtResource("1_0ba56")]
 position = Vector2(-14, 70)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 18.0
 height = 7.0
 
 [node name="Platform5" parent="Platforms" unique_id=1625163000 instance=ExtResource("1_0ba56")]
 position = Vector2(51, 85)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 13.0
 height = 8.0
 
 [node name="Platform6" parent="Platforms" unique_id=1644594669 instance=ExtResource("1_0ba56")]
 position = Vector2(139, 109)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 32.0
 height = 5.0
 
 [node name="Platform7" parent="Platforms" unique_id=689106217 instance=ExtResource("1_0ba56")]
 position = Vector2(102, 75)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform8" parent="Platforms" unique_id=2890554 instance=ExtResource("1_0ba56")]
 position = Vector2(14, 53)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform9" parent="Platforms" unique_id=473625262 instance=ExtResource("1_0ba56")]
 position = Vector2(136, 54)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 3.0
 
 [node name="Platform10" parent="Platforms" unique_id=1631709851 instance=ExtResource("1_0ba56")]
 position = Vector2(-16, 17)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 32.0
 height = 5.0
 
 [node name="Platform11" parent="Platforms" unique_id=1422013303 instance=ExtResource("1_0ba56")]
 position = Vector2(-82, 35)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform12" parent="Platforms" unique_id=1615777634 instance=ExtResource("1_0ba56")]
 position = Vector2(-73, 102)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform13" parent="Platforms" unique_id=1577898995 instance=ExtResource("1_0ba56")]
 position = Vector2(-138, -38)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform14" parent="Platforms" unique_id=74140032 instance=ExtResource("1_0ba56")]
 position = Vector2(168, 34)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform15" parent="Platforms" unique_id=1654319301 instance=ExtResource("1_0ba56")]
 position = Vector2(-82, -27)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform16" parent="Platforms" unique_id=725404685 instance=ExtResource("1_0ba56")]
 position = Vector2(129, 10)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform17" parent="Platforms" unique_id=898506641 instance=ExtResource("1_0ba56")]
 position = Vector2(54, -27)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform18" parent="Platforms" unique_id=118852896 instance=ExtResource("1_0ba56")]
 position = Vector2(-16, -17)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform19" parent="Platforms" unique_id=900843173 instance=ExtResource("1_0ba56")]
 position = Vector2(-128, -96)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform20" parent="Platforms" unique_id=86725948 instance=ExtResource("1_0ba56")]
 position = Vector2(-101, -65)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform21" parent="Platforms" unique_id=931543066 instance=ExtResource("1_0ba56")]
 position = Vector2(-124, 76)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform22" parent="Platforms" unique_id=508870332 instance=ExtResource("1_0ba56")]
 position = Vector2(-203, -106)
 rotation = -1.5707964
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 500.0
 height = 10.0
 
 [node name="Platform23" parent="Platforms" unique_id=2144006717 instance=ExtResource("1_0ba56")]
 position = Vector2(307, -106)
 rotation = -1.5707964
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 500.0
 height = 10.0
 
@@ -132,105 +159,126 @@ position = Vector2(0, -230)
 
 [node name="Platform1" parent="Platforms2" unique_id=1328799208 instance=ExtResource("1_0ba56")]
 position = Vector2(104, 126)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 24.0
 height = 4.0
 
 [node name="Platform2" parent="Platforms2" unique_id=361946365 instance=ExtResource("1_0ba56")]
 position = Vector2(-8, 116)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform4" parent="Platforms2" unique_id=1247755259 instance=ExtResource("1_0ba56")]
 position = Vector2(-14, 70)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 18.0
 height = 7.0
 
 [node name="Platform5" parent="Platforms2" unique_id=7030870 instance=ExtResource("1_0ba56")]
 position = Vector2(51, 85)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 13.0
 height = 8.0
 
 [node name="Platform6" parent="Platforms2" unique_id=2031849995 instance=ExtResource("1_0ba56")]
 position = Vector2(6, 179)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 32.0
 height = 5.0
 
 [node name="Platform7" parent="Platforms2" unique_id=911789117 instance=ExtResource("1_0ba56")]
 position = Vector2(137, 216)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform8" parent="Platforms2" unique_id=1115727250 instance=ExtResource("1_0ba56")]
 position = Vector2(48, 58)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform9" parent="Platforms2" unique_id=1357482000 instance=ExtResource("1_0ba56")]
 position = Vector2(93, 59)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 3.0
 
 [node name="Platform10" parent="Platforms2" unique_id=497630730 instance=ExtResource("1_0ba56")]
 position = Vector2(-59, 9)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 32.0
 height = 5.0
 
 [node name="Platform11" parent="Platforms2" unique_id=127813574 instance=ExtResource("1_0ba56")]
 position = Vector2(-35, 46)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform12" parent="Platforms2" unique_id=519380319 instance=ExtResource("1_0ba56")]
 position = Vector2(-72, 93)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform13" parent="Platforms2" unique_id=2124962646 instance=ExtResource("1_0ba56")]
 position = Vector2(96, -36)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform14" parent="Platforms2" unique_id=314081091 instance=ExtResource("1_0ba56")]
 position = Vector2(157, 40)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform15" parent="Platforms2" unique_id=784843405 instance=ExtResource("1_0ba56")]
 position = Vector2(-60, 147)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform16" parent="Platforms2" unique_id=1382832379 instance=ExtResource("1_0ba56")]
 position = Vector2(142, 0)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform17" parent="Platforms2" unique_id=1458918513 instance=ExtResource("1_0ba56")]
 position = Vector2(42, -40)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform18" parent="Platforms2" unique_id=1246383426 instance=ExtResource("1_0ba56")]
 position = Vector2(-39, -27)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform19" parent="Platforms2" unique_id=178872773 instance=ExtResource("1_0ba56")]
 position = Vector2(20, -84)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform20" parent="Platforms2" unique_id=852645251 instance=ExtResource("1_0ba56")]
 position = Vector2(-16, -53)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform21" parent="Platforms2" unique_id=163223146 instance=ExtResource("1_0ba56")]
 position = Vector2(-111, 55)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0
 
 [node name="Platform19" parent="." unique_id=1738940256 instance=ExtResource("1_0ba56")]
 position = Vector2(10, -258)
+color = Color(0, 0.98039216, 0.6039216, 1)
 width = 20.0
 height = 5.0

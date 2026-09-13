@@ -10,6 +10,7 @@ size = Vector2(100, 20)
 
 [node name="Platform" type="StaticBody2D" unique_id=1291661622]
 script = ExtResource("1_pquxj")
+color = null
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1346095306]
 color = Color(0, 0.98039216, 0.6039216, 1)

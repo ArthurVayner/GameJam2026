@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://chaxy0kndls4h"]
+
+[ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_6e32j"]
+[ext_resource type="Script" uid="uid://cu4ra0of5fod7" path="res://Scripts/bird_spawn_platform.gd" id="2_f0lc4"]
+
+[node name="BirdSpawnPlatform" type="Node2D" unique_id=916455241]
+
+[node name="Platform" parent="." unique_id=1291661622 instance=ExtResource("1_6e32j")]
+script = ExtResource("2_f0lc4")
+color = Color(0.81960785, 0.91764706, 0.92156863, 1)
+width = 30.0
+height = 4.0
