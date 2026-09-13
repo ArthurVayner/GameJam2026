@@ -6,7 +6,7 @@ const falling_object = preload("res://Scenes/FallingObject.tscn")
 
 
 var falling_object_offset: int = 200
-var falling_object_interval: int = 2
+var falling_object_interval: int = 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

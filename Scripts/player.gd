@@ -3,6 +3,10 @@ extends CharacterBody2D
 
 @onready var stun_timer: Timer = $StunTimer
 @onready var stun_effect: Sprite2D = $StunEffect
+@onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
+@onready var walk_sfx: AudioStreamPlayer2D = $WalkSFX
+
+
 
 const WALK_SPEED = 100.0
 const JUMP_VELOCITY = -300.0
@@ -24,6 +28,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor() and can_move:
 		velocity.y = JUMP_VELOCITY
+		jump_sfx.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
