@@ -21,10 +21,6 @@ const FRICTION = 400.0
 var can_move: bool = true
 var is_moving: bool = true
 
-func give_knockback(value:Vector2) -> void:
-	print(1)
-	velocity = value
-
 
 func _ready() -> void:
 	moving_sound_timer.start(0.1)
@@ -73,3 +69,8 @@ func _on_moving_sound_timer_timeout() -> void:
 	if is_moving:
 		walk_sfx.play()
 	moving_sound_timer.start(0.296)
+	
+func give_knockback(value:Vector2) -> void:
+	hit_sfx.play()
+	print(1)
+	velocity = value
