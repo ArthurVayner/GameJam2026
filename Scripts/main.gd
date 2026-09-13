@@ -12,7 +12,7 @@ var falling_object_offset: int = 200
 var falling_object_interval: int = 2
 
 func reset_bird_timer() -> void:
-	bird_timer.start(randf_range(2,3))
+	bird_timer.start(randf_range(2,7))
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
