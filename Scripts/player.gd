@@ -23,6 +23,7 @@ var is_moving: bool = true
 
 
 func _ready() -> void:
+	
 	moving_sound_timer.start(0.1)
 
 func _physics_process(delta: float) -> void:

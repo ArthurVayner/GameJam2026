@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://dtcf2dn0fgyae"]
 
 [ext_resource type="Script" uid="uid://cfcugiim5isip" path="res://Scripts/Platform.gd" id="1_pquxj"]
+[ext_resource type="Texture2D" uid="uid://bhdixyx8w6m6r" path="res://Assets/images/leaf right.png" id="2_8n7cf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pquxj"]
-size = Vector2(100, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kti7u"]
+size = Vector2(11, 7)
 
 [node name="Platform" type="StaticBody2D" unique_id=1291661622]
 script = ExtResource("1_pquxj")
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1346095306]
-color = Color(0, 0.98039216, 0.6039216, 1)
-polygon = PackedVector2Array(-50, -10, 50, -10, 50, 10, -50, 10)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1573073489]
-shape = SubResource("RectangleShape2D_pquxj")
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_kti7u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854075000]
+texture = ExtResource("2_8n7cf")
