@@ -31,7 +31,7 @@ texture = ExtResource("1_kyqiw")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="." unique_id=778852630]
 stream = ExtResource("3_gntrk")
-volume_db = 1.0
+volume_db = -8.538
 
 [node name="WalkSFX" type="AudioStreamPlayer2D" parent="." unique_id=371871590]
 stream = ExtResource("4_dewec")

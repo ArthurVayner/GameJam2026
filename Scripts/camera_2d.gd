@@ -6,6 +6,7 @@ extends Camera2D
 
 const maxLeft = -195
 const maxRight = 140
+const camera_y_offset = 30
 
 func die():
 	print("11")
@@ -22,7 +23,7 @@ func _process(delta: float) -> void:
 	var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
 	#clamp(value: Variant, min: Variant, max: Variant)
 	global_position.x= clamp(fallowPlayerPosition, maxLeft, maxRight)
-	global_position.y= calculatePosition(global_position.y, player.global_position.y, delta)
+	global_position.y= calculatePosition(global_position.y, player.global_position.y - camera_y_offset, delta)
 	
 	
 	

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://25rlnkcbu5tq"]
+
+[ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_1lweu"]
+[ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="2_uh2k4"]
+[ext_resource type="Script" uid="uid://cks2as4f3rw3o" path="res://Scripts/camera_2d.gd" id="3_qxb48"]
+
+[node name="BossLevel" type="Node2D" unique_id=36350112]
+
+[node name="Platform" parent="." unique_id=1291661622 instance=ExtResource("1_1lweu")]
+position = Vector2(-200, 195)
+scale = Vector2(7.201997, -5.167772)
+
+[node name="Player" parent="." unique_id=2015687368 instance=ExtResource("2_uh2k4")]
+position = Vector2(141, 138)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2105983654]
+script = ExtResource("3_qxb48")
