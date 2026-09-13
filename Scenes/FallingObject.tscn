@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kdqu6ajec8w8"]
 
 [ext_resource type="Script" uid="uid://clabh3km72p48" path="res://Scripts/falling_object.gd" id="1_7geer"]
-[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="2_w854r"]
+[ext_resource type="Texture2D" uid="uid://bku2275kxgwsq" path="res://Assets/images/asteroid.jpg" id="2_w854r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(9, 9)
@@ -13,7 +13,8 @@ script = ExtResource("1_7geer")
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1685695508]
-scale = Vector2(0.0703125, 0.0703125)
+position = Vector2(1.4210855e-14, 0)
+scale = Vector2(0.02, 0.018)
 texture = ExtResource("2_w854r")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
