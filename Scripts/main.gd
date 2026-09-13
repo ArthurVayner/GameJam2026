@@ -29,7 +29,7 @@ func _on_falling_obj_timer_timeout() -> void:
 	var object = falling_object.instantiate()
 	object.position = Vector2(player.position.x, player.position.y - falling_object_offset)
 	add_child(object)
-	print("object spawned")
+	#print("object spawned")
 	falling_obj_timer.start(falling_object_interval)
 
 

@@ -19,6 +19,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_speed_up_timer_timeout() -> void:
-	print("border boosted")
+	#print("border boosted")
 	speed += speedup
 	speed_up_timer.start(speedup_interval)
