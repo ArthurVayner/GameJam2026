@@ -4,12 +4,14 @@ extends StaticBody2D
 @export var width: float =100.0:
 	set(value):
 		width=value
-		setSize()
-		
+		if is_node_ready():
+			setSize()
+#		
 @export var height: float = 20.0:
 	set(value):
 		height=value
-		setSize()
+		if is_node_ready():
+			setSize()
 
 @onready var polygon_2d: Polygon2D = $Polygon2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
