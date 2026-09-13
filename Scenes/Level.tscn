@@ -113,12 +113,14 @@ width = 20.0
 height = 5.0
 
 [node name="Platform22" parent="Platforms" unique_id=508870332 instance=ExtResource("1_0ba56")]
+visible = false
 position = Vector2(-203, -106)
 rotation = -1.5707964
 width = 500.0
 height = 10.0
 
 [node name="Platform23" parent="Platforms" unique_id=2144006717 instance=ExtResource("1_0ba56")]
+visible = false
 position = Vector2(307, -106)
 rotation = -1.5707964
 width = 500.0
