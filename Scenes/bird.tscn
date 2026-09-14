@@ -1,17 +1,16 @@
 [gd_scene format=3 uid="uid://d0w1bn31ck55y"]
 
 [ext_resource type="Script" uid="uid://b2p0i77falbmd" path="res://Scripts/bird.gd" id="1_mcegt"]
-[ext_resource type="Texture2D" uid="uid://j0sqgcppkpd3" path="res://Assets/images/bird.png" id="2_dnvpi"]
+[ext_resource type="Texture2D" uid="uid://dhfiomtc0xjib" path="res://Assets/images/bird_new.png" id="2_dnvpi"]
 [ext_resource type="AudioStream" uid="uid://da4e7lhwi80y5" path="res://Assets/Objects/bird_flap_maybeIDK.wav" id="3_dnvpi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygmfd"]
-size = Vector2(1, 1)
+size = Vector2(12, 8)
 
 [node name="Bird" type="Area2D" unique_id=680903742]
 script = ExtResource("1_mcegt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=492606444]
-scale = Vector2(0.101, 0.1)
 texture = ExtResource("2_dnvpi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653949590]
