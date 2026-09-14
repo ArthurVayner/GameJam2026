@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://o7jkida1e3y1" path="res://Scripts/player.gd" id="1_gntrk"]
 [ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://gl71mdeesv16" path="res://Assets/images/cat.png" id="2_nn08x"]
 [ext_resource type="AudioStream" uid="uid://co7nqstwkaljf" path="res://Assets/Player/jack_jump_maybe2.wav" id="3_gntrk"]
 [ext_resource type="AudioStream" uid="uid://da25jcrkw5awi" path="res://Assets/Player/jack_step_boosted.wav" id="4_dewec"]
 [ext_resource type="AudioStream" uid="uid://bmy1pu6cuc7jf" path="res://Assets/Player/Jack_hit_by_rock_or_whatever.wav" id="5_5ixxa"]
@@ -14,9 +15,9 @@ height = 12.0
 script = ExtResource("1_gntrk")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1169303563]
-position = Vector2(-0.16250005, -1.1920929e-07)
-scale = Vector2(0.06503907, 0.09375)
-texture = ExtResource("1_kyqiw")
+position = Vector2(0, -48)
+scale = Vector2(0.21561053, 0.2753755)
+texture = ExtResource("2_nn08x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461626614]
 shape = SubResource("CapsuleShape2D_n6tw8")
