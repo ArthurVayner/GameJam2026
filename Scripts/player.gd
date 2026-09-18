@@ -45,7 +45,10 @@ func _physics_process(delta: float) -> void:
 		var overspeedingAcceleration := get_overspeeding_acceleration(direction)
 		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, overspeedingAcceleration * delta)
 	elif direction != 0:
-		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, ACCELERATION * delta)
+		var is_turning_around = sign(direction) != sign(velocity.x) and velocity.x != 0
+		var current_accel = ACCELERATION * 2.0 if is_turning_around else ACCELERATION
+		
+		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, current_accel * delta)
 			
 	else:
 		var friction = FRICTION if is_on_floor() and velocity.y >= 0 else AIR_FRICTION
