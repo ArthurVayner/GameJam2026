@@ -240,42 +240,52 @@ platform_texture = 5
 
 [node name="Platform" parent="Platforms4" unique_id=723545176 instance=ExtResource("1_0ba56")]
 position = Vector2(-14, -188)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform2" parent="Platforms4" unique_id=1848363022 instance=ExtResource("1_0ba56")]
 position = Vector2(-28, -98)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform3" parent="Platforms4" unique_id=1249992930 instance=ExtResource("1_0ba56")]
 position = Vector2(-23, 38)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform4" parent="Platforms4" unique_id=1991750136 instance=ExtResource("1_0ba56")]
 position = Vector2(31, -318)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform5" parent="Platforms4" unique_id=351211670 instance=ExtResource("1_0ba56")]
 position = Vector2(61, -48)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform6" parent="Platforms4" unique_id=490589389 instance=ExtResource("1_0ba56")]
 position = Vector2(58, 74)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform7" parent="Platforms4" unique_id=629057410 instance=ExtResource("1_0ba56")]
 position = Vector2(27, -239)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform8" parent="Platforms4" unique_id=437592080 instance=ExtResource("1_0ba56")]
 position = Vector2(18, -133)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform9" parent="Platforms4" unique_id=1775590353 instance=ExtResource("1_0ba56")]
 position = Vector2(23, -19)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform10" parent="Platforms4" unique_id=1866331802 instance=ExtResource("1_0ba56")]
 position = Vector2(16, 98)
+scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform20" parent="Platforms4" unique_id=1769853610 instance=ExtResource("1_0ba56")]
@@ -353,7 +363,6 @@ metadata/_edit_lock_ = true
 [node name="WorldBorders" type="Node2D" parent="." unique_id=204834978]
 
 [node name="Platform3" parent="WorldBorders" unique_id=1667550640 instance=ExtResource("1_0ba56")]
-visible = false
 position = Vector2(-11, 140)
 scale = Vector2(-1, 1.9422277)
 platform_texture = 4
@@ -361,7 +370,6 @@ width = 500.0
 height = 10.0
 
 [node name="Platform22" parent="WorldBorders" unique_id=508870332 instance=ExtResource("1_0ba56")]
-visible = false
 position = Vector2(-156, -122)
 rotation = 1.5707964
 platform_texture = 8
@@ -369,7 +377,6 @@ width = 500.0
 height = 10.0
 
 [node name="Platform23" parent="WorldBorders" unique_id=2144006717 instance=ExtResource("1_0ba56")]
-visible = false
 position = Vector2(168, -121)
 rotation = -1.5707964
 platform_texture = 8
