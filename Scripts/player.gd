@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var stun_timer: Timer = $StunTimer
 @onready var moving_sound_timer: Timer = $MovingSoundTimer
 @onready var jump_buffer_timer: Timer = $JumpBufferTimer
+@onready var coyote_timer: Timer = $CoyoteTimer
 @onready var stun_effect: Sprite2D = $StunEffect
 
 @onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
@@ -28,14 +29,17 @@ func _ready() -> void:
 	moving_sound_timer.start(0.1)
 
 func _physics_process(delta: float) -> void:
+	if is_on_floor():
+		coyote_timer.start(0.1)
 	
 	# Handle jump.
-	var can_jump = is_on_floor() and can_move
+	var can_jump = (is_on_floor() or !coyote_timer.is_stopped()) and can_move
 	if can_jump:
 		if Input.is_action_just_pressed("jump") or !jump_buffer_timer.is_stopped():
 			velocity.y = JUMP_VELOCITY
 			jump_sfx.play()
 			jump_buffer_timer.stop()
+			coyote_timer.stop()
 	elif Input.is_action_just_pressed("jump"):
 			jump_buffer_timer.start(0.1)
 
