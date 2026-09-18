@@ -92,7 +92,3 @@ func give_knockback(value:Vector2) -> void:
 	velocity += value
 	velocity.y = max(velocity.y, -250)
 	print('velocity.y give_knockback',velocity.y)
-
-
-func _on_jump_buffer_timer_timeout() -> void:
-	pass # Replace with function body.
