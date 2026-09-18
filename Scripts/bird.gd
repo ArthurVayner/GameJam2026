@@ -30,7 +30,7 @@ func _process(_delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		body.give_knockback(Vector2(350 * direction,-150))
+		body.give_knockback(Vector2(350 * direction, -100))
 		queue_free()
 	pass # Replace with function body.
 	
