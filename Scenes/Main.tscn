@@ -13,7 +13,7 @@ script = ExtResource("1_pbw6q")
 script = ExtResource("2_v1gob")
 
 [node name="Level" parent="." unique_id=462795862 instance=ExtResource("5_vy5pj")]
-position = Vector2(-75, -72)
+position = Vector2(-96, -56)
 
 [node name="FallingObjTimer" type="Timer" parent="." unique_id=1908308091]
 

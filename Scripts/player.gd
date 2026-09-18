@@ -3,27 +3,26 @@ extends CharacterBody2D
 
 @onready var stun_timer: Timer = $StunTimer
 @onready var moving_sound_timer: Timer = $MovingSoundTimer
-
-
 @onready var stun_effect: Sprite2D = $StunEffect
 
 @onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
 @onready var walk_sfx: AudioStreamPlayer2D = $WalkSFX
 @onready var hit_sfx: AudioStreamPlayer2D = $HitSFX
 
-
-
 @export var WALK_SPEED = 100.0
-@export var JUMP_VELOCITY = -300.0
-const ACCELERATION = 1500.0
-const FRICTION = 400.0
+@export var JUMP_VELOCITY = -320.0
+const ACCELERATION = 2500.0
+const FRICTION = 8000.0
+const AIR_FRICTION = 400.0
+const KNOCKBACK_DECELERATION = 800.0
+func get_overspeeding_acceleration(direction: float) -> float:
+	return 1000.0 if sign(velocity.x) == -direction else 500.0 if sign(velocity.x) == direction else 700.0
+
 
 var can_move: bool = true
-var is_moving: bool = true
-
+var is_moving: bool = false
 
 func _ready() -> void:
-	
 	moving_sound_timer.start(0.1)
 
 func _physics_process(delta: float) -> void:
@@ -36,24 +35,24 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		jump_sfx.play()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Get the input direction. If we can't move, force it to 0.
+	var direction := Input.get_axis("go_left", "go_right") if can_move else 0.0
+	is_moving= bool(direction)
+	var is_overspeeding = abs(velocity.x) > WALK_SPEED
 
-	var direction := Input.get_axis("go_left", "go_right")
-	if direction and can_move:
+	if is_overspeeding:
+		var overspeedingAcceleration := get_overspeeding_acceleration(direction)
+		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, overspeedingAcceleration * delta)
+	elif direction != 0:
 		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, ACCELERATION * delta)
-		is_moving = true
-		#print("moving")
+			
 	else:
-		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
-		is_moving = false
-		#print("not moving")
+		var friction = FRICTION if is_on_floor() else AIR_FRICTION
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
 		
 	move_and_slide()
 
-	
-	
-	
+
 func player_stunned():
 	hit_sfx.play()
 	can_move = false
@@ -67,11 +66,12 @@ func _on_stun_timer_timeout() -> void:
 
 
 func _on_moving_sound_timer_timeout() -> void:
-	if is_moving:
+	if is_moving and is_on_floor():
 		walk_sfx.play()
 	moving_sound_timer.start(0.296)
 	
 func give_knockback(value:Vector2) -> void:
 	hit_sfx.play()
-	print(1)
-	velocity = value
+	velocity += value
+	velocity.y = max(velocity.y, -250)
+	print('velocity.y give_knockback',velocity.y)
