@@ -15,6 +15,7 @@ const ACCELERATION = 2500.0
 const FRICTION = 8000.0
 const AIR_FRICTION = 400.0
 const heavy_gravity_multiplier = 2.0
+const terminal_velocity = 600.0
 func get_overspeeding_acceleration(direction: float) -> float:
 	return 1000.0 if sign(velocity.x) == -direction else 500.0 if sign(velocity.x) == direction else 700.0
 
@@ -35,6 +36,7 @@ func _physics_process(delta: float) -> void:
 	var gravityMultiplier := heavy_gravity_multiplier if velocity.y < 0 and not Input.is_action_pressed("jump") else 1.0
 	if not is_on_floor():
 		velocity += get_gravity() * delta * gravityMultiplier
+		velocity.y = min(velocity.y, terminal_velocity)
 
 	# Get the input direction. If we can't move, force it to 0.
 	var direction := Input.get_axis("go_left", "go_right") if can_move else 0.0
