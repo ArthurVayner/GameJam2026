@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var stun_timer: Timer = $StunTimer
 @onready var moving_sound_timer: Timer = $MovingSoundTimer
+@onready var jump_buffer_timer: Timer = $JumpBufferTimer
 @onready var stun_effect: Sprite2D = $StunEffect
 
 @onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
@@ -29,9 +30,15 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() and can_move:
-		velocity.y = JUMP_VELOCITY
-		jump_sfx.play()
+	var can_jump = is_on_floor() and can_move
+	if can_jump:
+		if Input.is_action_just_pressed("jump") or !jump_buffer_timer.is_stopped():
+			velocity.y = JUMP_VELOCITY
+			jump_sfx.play()
+			jump_buffer_timer.stop()
+	elif Input.is_action_just_pressed("jump"):
+			jump_buffer_timer.start(0.1)
+
 		
 	var gravityMultiplier := heavy_gravity_multiplier if velocity.y < 0 and not Input.is_action_pressed("jump") else 1.0
 	if not is_on_floor():
@@ -81,3 +88,7 @@ func give_knockback(value:Vector2) -> void:
 	velocity += value
 	velocity.y = max(velocity.y, -250)
 	print('velocity.y give_knockback',velocity.y)
+
+
+func _on_jump_buffer_timer_timeout() -> void:
+	pass # Replace with function body.
