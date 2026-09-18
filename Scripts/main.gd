@@ -2,9 +2,11 @@ extends Node2D
 
 const falling_object = preload("res://Scenes/FallingObject.tscn")
 const bird_scene  = preload("res://Scenes/bird.tscn")
+
 @onready var falling_obj_timer: Timer = $FallingObjTimer
 @onready var bird_timer: Timer = $BirdTimer
 @onready var player: Player = $Player
+@onready var label: Label = $Label
 
 
 
