@@ -43,8 +43,12 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("jump"):
 			jump_buffer_timer.start(0.1)
 
-		
-	var gravityMultiplier := heavy_gravity_multiplier if velocity.y < 0 and not Input.is_action_pressed("jump") else 1.0
+	var gravityMultiplier := 1.0
+	if velocity.y < 0 and not Input.is_action_pressed("jump"):
+		gravityMultiplier = heavy_gravity_multiplier
+	elif abs(velocity.y) < 20.0 and Input.is_action_pressed("jump"):
+		gravityMultiplier = 0.66
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta * gravityMultiplier
 		velocity.y = min(velocity.y, terminal_velocity)
