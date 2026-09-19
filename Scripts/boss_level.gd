@@ -2,7 +2,9 @@ extends Node2D
 
 const throwing_object = preload("res://Scenes/ThrownObject.tscn")
 
-@onready var boss_throw: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var boss_throw_sfx: AudioStreamPlayer2D = $Boss/Boss_Throw_SFX
+
+
 
 
 @onready var throwing_obj_timer: Timer = $ThrowingObjTimer
@@ -29,17 +31,17 @@ func object_spawn() -> void:
 	add_child(object)
 	print(object.global_position)
 	print(boss.global_position)
-	boss_throw.play()
+	boss_throw_sfx.play()
 
 
 
 func _on_throwing_obj_timer_timeout() -> void:
 	object_spawn()
-	var throwing_object_interval: float = [1.0,1.2].pick_random()
+	var throwing_object_interval: float = [0.8,1].pick_random()
 	throwing_obj_timer.start(throwing_object_interval)
 	
 
 func _on_throwing_obj_timer_2_timeout() -> void:
 	object_spawn()
-	var throwing_object_interval: float = [1.0,1.2].pick_random()
+	var throwing_object_interval: float = [0.9,1.1].pick_random()
 	throwing_obj_timer_2.start(throwing_object_interval)

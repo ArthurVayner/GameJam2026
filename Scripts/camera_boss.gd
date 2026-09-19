@@ -1,22 +1,27 @@
 extends Camera2D
 
-@onready var player: CharacterBody2D = $"../Player"
-@onready var crown: Sprite2D = $"../Crown"
+@onready var player: Player = $".."
+@onready var boss: Node2D = $"../../Boss"
+
+
+@onready var platform_to_delete1: StaticBody2D = $"../../Platforms to delete/Platform"
+@onready var platform_to_delete2: StaticBody2D = $"../../Platforms to delete/Platform2"
 
 
 @export var smooth_speed: float = 5.0
 
 const maxLeft = -195
 const maxRight = 140
-const camera_y_offset = 35
+const camera_y_offset = 10
 const camera_x_offset = -2.5
-const camera_acceleration = 0.005
+const camera_acceleration = 0.001
 
 var camera_speed = 0
 var is_cutscene: bool = true
 
 func _ready() -> void:
-	pass
+	global_position.x = boss.global_position.x
+	global_position.y = player.global_position.y
 
 func die():
 	print("11")
@@ -35,6 +40,9 @@ func _process(delta: float) -> void:
 		camera_speed += camera_acceleration
 		if global_position.x >= player.position.x:
 			is_cutscene = false
+			platform_to_delete1.queue_free()
+			platform_to_delete2.queue_free()
+			
 	else:
 		var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
 		#clamp(value: Variant, min: Variant, max: Variant)
