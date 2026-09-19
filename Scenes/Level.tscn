@@ -118,7 +118,7 @@ position = Vector2(-11, -323)
 platform_texture = 2
 
 [node name="Platform20" parent="Platforms2" unique_id=1182460285 instance=ExtResource("1_0ba56")]
-position = Vector2(-80, -146)
+position = Vector2(-80, -148)
 scale = Vector2(-1, 1)
 platform_texture = 3
 
