@@ -15,39 +15,30 @@
 
 [node name="Platform" parent="Platforms1" unique_id=1291661622 instance=ExtResource("1_0ba56")]
 position = Vector2(87, -440)
-platform_texture = 0
 
 [node name="Platform2" parent="Platforms1" unique_id=1464590313 instance=ExtResource("1_0ba56")]
 position = Vector2(18, -482)
-platform_texture = 0
 
 [node name="Platform3" parent="Platforms1" unique_id=1847265870 instance=ExtResource("1_0ba56")]
 position = Vector2(12, -436)
-platform_texture = 0
 
 [node name="Platform4" parent="Platforms1" unique_id=492768401 instance=ExtResource("1_0ba56")]
 position = Vector2(12, -333)
-platform_texture = 0
 
 [node name="Platform5" parent="Platforms1" unique_id=1152166992 instance=ExtResource("1_0ba56")]
 position = Vector2(-35, -338)
-platform_texture = 0
 
 [node name="Platform6" parent="Platforms1" unique_id=1509945887 instance=ExtResource("1_0ba56")]
 position = Vector2(-7, -347)
-platform_texture = 0
 
 [node name="Platform8" parent="Platforms1" unique_id=1076527401 instance=ExtResource("1_0ba56")]
 position = Vector2(-42, 120)
-platform_texture = 0
 
 [node name="Platform9" parent="Platforms1" unique_id=1022630069 instance=ExtResource("1_0ba56")]
 position = Vector2(71, -377)
-platform_texture = 0
 
 [node name="Platform10" parent="Platforms1" unique_id=646100283 instance=ExtResource("1_0ba56")]
 position = Vector2(-40, -35)
-platform_texture = 0
 
 [node name="Platform20" parent="Platforms1" unique_id=1881822779 instance=ExtResource("1_0ba56")]
 position = Vector2(-41, -435)
@@ -111,7 +102,7 @@ position = Vector2(-42, -273)
 platform_texture = 2
 
 [node name="Platform7" parent="Platforms2" unique_id=245653208 instance=ExtResource("1_0ba56")]
-position = Vector2(-76, -244)
+position = Vector2(79, -195)
 platform_texture = 2
 
 [node name="Platform8" parent="Platforms2" unique_id=183408796 instance=ExtResource("1_0ba56")]
@@ -209,11 +200,6 @@ platform_texture = 5
 
 [node name="Platform46" parent="Platforms3" unique_id=1840975956 instance=ExtResource("1_0ba56")]
 position = Vector2(115, -47)
-scale = Vector2(-1, 1)
-platform_texture = 5
-
-[node name="Platform45" parent="Platforms3" unique_id=320507504 instance=ExtResource("1_0ba56")]
-position = Vector2(115, -137)
 scale = Vector2(-1, 1)
 platform_texture = 5
 
@@ -317,12 +303,6 @@ platform_texture = 6
 [node name="Bird" parent="." unique_id=896752602 instance=ExtResource("3_fuudy")]
 position = Vector2(-45, 128)
 
-[node name="BirdSpawnPlatform" parent="." unique_id=916455241 instance=ExtResource("1_8rbpu")]
-position = Vector2(114, -140)
-
-[node name="BirdSpawnPlatform2" parent="." unique_id=172160104 instance=ExtResource("1_8rbpu")]
-position = Vector2(85, 100)
-
 [node name="Wall" type="Sprite2D" parent="." unique_id=755569080]
 z_index = -1
 position = Vector2(-79, -372)
@@ -399,6 +379,13 @@ text = "1
 3
 4"
 
+[node name="BirdSpawnPlatform" parent="." unique_id=916455241 instance=ExtResource("1_8rbpu")]
+position = Vector2(115, -139)
+platform_texture = 5
+
+[node name="BirdSpawnPlatform2" parent="." unique_id=172160104 instance=ExtResource("1_8rbpu")]
+position = Vector2(85, 100)
+
 [node name="BirdSpawnPlatform3" parent="." unique_id=463594167 instance=ExtResource("1_8rbpu")]
 position = Vector2(6, 8)
 direction = -1
@@ -406,3 +393,5 @@ direction = -1
 [node name="BirdSpawnPlatform4" parent="." unique_id=1198272275 instance=ExtResource("1_8rbpu")]
 position = Vector2(-84, -65)
 direction = -1
+
+[node name="Node2D" type="Node2D" parent="." unique_id=715796183]
