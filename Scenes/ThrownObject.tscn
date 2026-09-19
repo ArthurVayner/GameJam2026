@@ -1,21 +1,64 @@
 [gd_scene format=3 uid="uid://cwls0g65ulkh1"]
 
 [ext_resource type="Script" uid="uid://b6u4776cesq4d" path="res://Scripts/thrown_object.gd" id="1_pd7l6"]
-[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="1_sjwef"]
+[ext_resource type="Texture2D" uid="uid://c7qbwr15oecvi" path="res://Assets/Bone Animation/bone1.png" id="2_7yk8e"]
+[ext_resource type="Texture2D" uid="uid://cwc8hokmjnplx" path="res://Assets/Bone Animation/bone4.png" id="3_n7ksq"]
+[ext_resource type="Texture2D" uid="uid://v2mmm0g4fmtr" path="res://Assets/Bone Animation/bone3.png" id="4_87hjt"]
+[ext_resource type="Texture2D" uid="uid://dnaavk4xndtta" path="res://Assets/Bone Animation/skull1.png" id="5_01c70"]
+[ext_resource type="Texture2D" uid="uid://0yi8it85gln4" path="res://Assets/Bone Animation/bone2.png" id="5_uonyd"]
+[ext_resource type="Texture2D" uid="uid://cqn063va1jn2d" path="res://Assets/Bone Animation/skull2.png" id="6_uonyd"]
+[ext_resource type="Texture2D" uid="uid://cna3dv6upcslw" path="res://Assets/Bone Animation/skull3.png" id="7_vn15j"]
+[ext_resource type="Texture2D" uid="uid://dsmiwaoctkg5e" path="res://Assets/Bone Animation/skull4.png" id="8_1dilq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(14, 14)
+size = Vector2(4.5, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7yk8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7ksq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_87hjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uonyd")
+}],
+"loop": 1,
+"name": &"bone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_01c70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uonyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vn15j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1dilq")
+}],
+"loop": 1,
+"name": &"skull",
+"speed": 5.0
+}]
 
 [node name="ThrownObject" type="Area2D" unique_id=927794457]
 script = ExtResource("1_pd7l6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296377814]
-position = Vector2(10, -25)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=492600056]
-position = Vector2(3.5762787e-07, -1.1920929e-06)
-scale = Vector2(0.109375, 0.10937499)
-texture = ExtResource("1_sjwef")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1252038782]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"bone"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

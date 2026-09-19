@@ -1,167 +1,307 @@
 [gd_scene format=3 uid="uid://25rlnkcbu5tq"]
 
-[ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_1lweu"]
+[ext_resource type="Texture2D" uid="uid://d3xiepvxm1hgf" path="res://Assets/images/Boss_BG.png" id="1_1lweu"]
 [ext_resource type="Script" uid="uid://bpqtm7or4u01h" path="res://Scripts/boss_level.gd" id="1_eaet5"]
-[ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="2_uh2k4"]
+[ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="2_uh2k4"]
+[ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="3_qxb48"]
 [ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="4_7um7k"]
-[ext_resource type="Script" uid="uid://cidvkxj27r6bj" path="res://Scripts/camera_boss.gd" id="4_eaet5"]
-[ext_resource type="Script" uid="uid://devnboindduvf" path="res://Scripts/Misc/crown.gd" id="6_doqcq"]
+[ext_resource type="Script" uid="uid://cidvkxj27r6bj" path="res://Scripts/camera_boss.gd" id="4_f6kao"]
+[ext_resource type="AudioStream" uid="uid://d1tbh8ebtq0lm" path="res://Assets/Sounds/Boss_Throw_Final.wav" id="6_doqcq"]
+[ext_resource type="AudioStream" uid="uid://cbxktsjoltgnm" path="res://Assets/Music/Boss_Music.wav" id="8_geoi6"]
 
-[node name="BossLevel" type="Node2D" unique_id=36350112]
+[node name="BossBg" type="Sprite2D" unique_id=1006416001]
+z_index = -1
+texture_filter = 1
+texture = ExtResource("1_1lweu")
 script = ExtResource("1_eaet5")
+metadata/_edit_lock_ = true
 
-[node name="Platform" parent="." unique_id=1291661622 instance=ExtResource("1_1lweu")]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-position = Vector2(-930, 42)
-scale = Vector2(130.3025, 10.286074)
-platform_texture = 4
-color = Color(0, 0, 0, 1)
+[node name="Node2D" type="Node2D" parent="." unique_id=396735062]
 
-[node name="Player" parent="." unique_id=2015687368 instance=ExtResource("2_uh2k4")]
-position = Vector2(141, -6)
-JUMP_VELOCITY = -200.0
+[node name="BossBg" type="Sprite2D" parent="Node2D" unique_id=648568888]
+z_index = -1
+texture_filter = 1
+position = Vector2(-214, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2105983654]
-script = ExtResource("4_eaet5")
+[node name="BossBg2" type="Sprite2D" parent="Node2D" unique_id=1559833463]
+z_index = -1
+texture_filter = 1
+position = Vector2(-427, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Crown" type="Sprite2D" parent="." unique_id=1655625636]
-position = Vector2(-1965, -8)
-scale = Vector2(0.125, 0.08593749)
+[node name="BossBg3" type="Sprite2D" parent="Node2D" unique_id=1873226724]
+z_index = -1
+texture_filter = 1
+position = Vector2(-641, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
+
+[node name="BossBg4" type="Sprite2D" parent="Node2D" unique_id=1060842127]
+z_index = -1
+texture_filter = 1
+position = Vector2(-855, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
+
+[node name="BossBg5" type="Sprite2D" parent="Node2D" unique_id=942955415]
+z_index = -1
+texture_filter = 1
+position = Vector2(-1069, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=2015687368 instance=ExtResource("3_qxb48")]
+position = Vector2(88, 3)
+WALK_SPEED = 75.0
+JUMP_VELOCITY = -250.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1843995201]
+script = ExtResource("4_f6kao")
+
+[node name="ThrowingObjTimer" type="Timer" parent="." unique_id=1476940552]
+
+[node name="ThrowingObjTimer2" type="Timer" parent="." unique_id=167422295]
+
+[node name="Platforms" type="Node2D" parent="." unique_id=647342238]
+
+[node name="Platform3" parent="Platforms" unique_id=1291661622 instance=ExtResource("2_uh2k4")]
+position = Vector2(27, 15)
+platform_texture = 8
+
+[node name="Platform4" parent="Platforms" unique_id=1480205254 instance=ExtResource("2_uh2k4")]
+position = Vector2(-16, -4)
+platform_texture = 8
+
+[node name="Platform10" parent="Platforms" unique_id=666095525 instance=ExtResource("2_uh2k4")]
+position = Vector2(-66, 21)
+platform_texture = 8
+
+[node name="Platform20" parent="Platforms" unique_id=384670169 instance=ExtResource("2_uh2k4")]
+position = Vector2(-238, 22)
+platform_texture = 8
+
+[node name="Platform11" parent="Platforms" unique_id=800732842 instance=ExtResource("2_uh2k4")]
+position = Vector2(-104, 3)
+platform_texture = 8
+
+[node name="Platform15" parent="Platforms" unique_id=768108382 instance=ExtResource("2_uh2k4")]
+position = Vector2(-142, -12)
+platform_texture = 8
+
+[node name="Platform14" parent="Platforms" unique_id=830773904 instance=ExtResource("2_uh2k4")]
+position = Vector2(-281, 8)
+platform_texture = 8
+
+[node name="Platform19" parent="Platforms" unique_id=808270662 instance=ExtResource("2_uh2k4")]
+position = Vector2(-199, -3)
+platform_texture = 8
+
+[node name="Platform18" parent="Platforms" unique_id=1530403402 instance=ExtResource("2_uh2k4")]
+position = Vector2(-375, 23)
+platform_texture = 8
+
+[node name="Platform6" parent="Platforms" unique_id=1948871139 instance=ExtResource("2_uh2k4")]
+position = Vector2(-421, 5)
+platform_texture = 8
+
+[node name="Platform7" parent="Platforms" unique_id=1714667070 instance=ExtResource("2_uh2k4")]
+position = Vector2(-468, -5)
+platform_texture = 8
+
+[node name="Platform12" parent="Platforms" unique_id=651095192 instance=ExtResource("2_uh2k4")]
+position = Vector2(-515, 22)
+platform_texture = 8
+
+[node name="Platform21" parent="Platforms" unique_id=523336598 instance=ExtResource("2_uh2k4")]
+position = Vector2(-734, 21)
+platform_texture = 8
+
+[node name="Platform13" parent="Platforms" unique_id=1794355761 instance=ExtResource("2_uh2k4")]
+position = Vector2(-556, 6)
+platform_texture = 8
+
+[node name="Platform17" parent="Platforms" unique_id=1818739585 instance=ExtResource("2_uh2k4")]
+position = Vector2(-598, -6)
+platform_texture = 8
+
+[node name="Platform22" parent="Platforms" unique_id=282004628 instance=ExtResource("2_uh2k4")]
+position = Vector2(-782, 7)
+platform_texture = 8
+
+[node name="Platform23" parent="Platforms" unique_id=606085740 instance=ExtResource("2_uh2k4")]
+position = Vector2(-644, 23)
+platform_texture = 8
+
+[node name="Platform24" parent="Platforms" unique_id=1674948002 instance=ExtResource("2_uh2k4")]
+position = Vector2(-829, -9)
+platform_texture = 8
+
+[node name="Platform25" parent="Platforms" unique_id=552809283 instance=ExtResource("2_uh2k4")]
+position = Vector2(-884, 23)
+platform_texture = 8
+
+[node name="Platform26" parent="Platforms" unique_id=1193822123 instance=ExtResource("2_uh2k4")]
+position = Vector2(-933, 24)
+platform_texture = 8
+
+[node name="Platform27" parent="Platforms" unique_id=1512102403 instance=ExtResource("2_uh2k4")]
+position = Vector2(-981, 10)
+platform_texture = 8
+
+[node name="Platform28" parent="Platforms" unique_id=431127641 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1028, -6)
+platform_texture = 8
+
+[node name="Platform29" parent="Platforms" unique_id=1652527086 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1083, 26)
+platform_texture = 8
+
+[node name="Platform5" parent="Platforms" unique_id=112004760 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1182, 17)
+platform_texture = 8
+
+[node name="Platform8" parent="Platforms" unique_id=2076135106 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1225, -2)
+platform_texture = 8
+
+[node name="Platform16" parent="Platforms" unique_id=633591480 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1275, 23)
+platform_texture = 8
+
+[node name="Platform30" parent="Platforms" unique_id=134107063 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1447, 24)
+platform_texture = 8
+
+[node name="Platform31" parent="Platforms" unique_id=1218761394 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1313, 5)
+platform_texture = 8
+
+[node name="Platform32" parent="Platforms" unique_id=935171666 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1351, -10)
+platform_texture = 8
+
+[node name="Platform33" parent="Platforms" unique_id=169385007 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1486, 12)
+platform_texture = 8
+
+[node name="Platform34" parent="Platforms" unique_id=977073846 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1408, -1)
+platform_texture = 8
+
+[node name="Platform35" parent="Platforms" unique_id=1383707386 instance=ExtResource("2_uh2k4")]
+position = Vector2(-326, 23)
+platform_texture = 8
+
+[node name="Platform36" parent="Platforms" unique_id=1493260056 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1522, -4)
+platform_texture = 8
+
+[node name="Boss" type="Node2D" parent="." unique_id=1460460206]
+position = Vector2(-1557, 27)
+
+[node name="Boss_Icon" type="Sprite2D" parent="Boss" unique_id=1354676578]
+position = Vector2(0, -20)
+scale = Vector2(0.34374985, 0.3984375)
 texture = ExtResource("4_7um7k")
-script = ExtResource("6_doqcq")
 
-[node name="Boss" type="Sprite2D" parent="." unique_id=810132822]
-position = Vector2(-1840, -28.000002)
-scale = Vector2(0.46093735, 0.44531256)
-texture = ExtResource("4_7um7k")
+[node name="Boss_Throw_SFX" type="AudioStreamPlayer2D" parent="Boss" unique_id=106645474]
+position = Vector2(0, -18)
+stream = ExtResource("6_doqcq")
+max_distance = 1000.0
 
-[node name="ThrowingObjTimer" type="Timer" parent="." unique_id=630819156]
+[node name="Borders" type="Node2D" parent="." unique_id=741083743]
 
-[node name="Platforms" type="Node2D" parent="." unique_id=443879782]
+[node name="Floor" parent="Borders" unique_id=148021107 instance=ExtResource("2_uh2k4")]
+position = Vector2(-755.00006, 37)
+scale = Vector2(71, 1)
+platform_texture = 9
 
-[node name="Platform16" parent="." unique_id=838268063 instance=ExtResource("1_1lweu")]
-position = Vector2(-1039, -5)
-platform_texture = 4
+[node name="Wall1" parent="Borders" unique_id=717650981 instance=ExtResource("2_uh2k4")]
+position = Vector2(96, 1)
+rotation = -1.5707964
+scale = Vector2(6.359995, 1)
+platform_texture = 9
 
-[node name="Platform17" parent="." unique_id=2027229423 instance=ExtResource("1_1lweu")]
-position = Vector2(-1793, -36)
-platform_texture = 4
+[node name="Wall2" parent="Borders" unique_id=952239052 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1594, -7.0000005)
+rotation = 1.5707964
+scale = Vector2(6.359995, 1)
+platform_texture = 9
 
-[node name="Platform18" parent="." unique_id=718437075 instance=ExtResource("1_1lweu")]
-position = Vector2(-1713, -16)
-platform_texture = 4
+[node name="Balcony" parent="Borders" unique_id=49961417 instance=ExtResource("2_uh2k4")]
+position = Vector2(70, 14)
+scale = Vector2(2.1599998, 1)
+platform_texture = 9
 
-[node name="Platform19" parent="." unique_id=2016788230 instance=ExtResource("1_1lweu")]
-position = Vector2(-1635, -18)
-platform_texture = 4
+[node name="Platforms to delete" type="Node2D" parent="." unique_id=2047864158]
+position = Vector2(-481, 27)
 
-[node name="Platform20" parent="." unique_id=115837258 instance=ExtResource("1_1lweu")]
-position = Vector2(-1596, -6)
-platform_texture = 4
+[node name="Platform" parent="Platforms to delete" unique_id=1615585285 instance=ExtResource("2_uh2k4")]
+position = Vector2(553, -25)
+platform_texture = 9
 
-[node name="Platform21" parent="." unique_id=746120632 instance=ExtResource("1_1lweu")]
-position = Vector2(-1424, -5)
-platform_texture = 4
+[node name="Platform2" parent="Platforms to delete" unique_id=671217663 instance=ExtResource("2_uh2k4")]
+position = Vector2(562, -34)
+platform_texture = 9
 
-[node name="Platform22" parent="." unique_id=717012501 instance=ExtResource("1_1lweu")]
-position = Vector2(-1381, -15)
-platform_texture = 4
+[node name="BackGrounds" type="Node2D" parent="." unique_id=750479074]
 
-[node name="Platform23" parent="." unique_id=1016279403 instance=ExtResource("1_1lweu")]
-position = Vector2(-1340, -7)
-platform_texture = 4
+[node name="BossBg6" type="Sprite2D" parent="BackGrounds" unique_id=659860260]
+z_index = -1
+texture_filter = 1
+position = Vector2(-1283, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform24" parent="." unique_id=429759766 instance=ExtResource("1_1lweu")]
-position = Vector2(-1247, -25)
-platform_texture = 4
+[node name="BossBg7" type="Sprite2D" parent="BackGrounds" unique_id=193998529]
+z_index = -1
+texture_filter = 1
+position = Vector2(-1497, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform25" parent="." unique_id=481384476 instance=ExtResource("1_1lweu")]
-position = Vector2(-1209, -16)
-platform_texture = 4
+[node name="BossBg" type="Sprite2D" parent="BackGrounds" unique_id=1639715703]
+z_index = -1
+texture_filter = 1
+position = Vector2(-214, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform26" parent="." unique_id=538367149 instance=ExtResource("1_1lweu")]
-position = Vector2(-1176, -7)
-platform_texture = 4
+[node name="BossBg2" type="Sprite2D" parent="BackGrounds" unique_id=660239625]
+z_index = -1
+texture_filter = 1
+position = Vector2(-427, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform27" parent="." unique_id=916406469 instance=ExtResource("1_1lweu")]
-position = Vector2(-1081, -14)
-platform_texture = 4
+[node name="BossBg3" type="Sprite2D" parent="BackGrounds" unique_id=1258825606]
+z_index = -1
+texture_filter = 1
+position = Vector2(-641, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform2" parent="." unique_id=1831276225 instance=ExtResource("1_1lweu")]
-position = Vector2(80, -5)
-platform_texture = 4
+[node name="BossBg4" type="Sprite2D" parent="BackGrounds" unique_id=1163471399]
+z_index = -1
+texture_filter = 1
+position = Vector2(-855, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform3" parent="." unique_id=1600609453 instance=ExtResource("1_1lweu")]
-position = Vector2(-870, -7)
-platform_texture = 4
+[node name="BossBg5" type="Sprite2D" parent="BackGrounds" unique_id=1449080309]
+z_index = -1
+texture_filter = 1
+position = Vector2(-1069, 0)
+texture = ExtResource("1_1lweu")
+metadata/_edit_lock_ = true
 
-[node name="Platform4" parent="." unique_id=885465847 instance=ExtResource("1_1lweu")]
-position = Vector2(-769, -15)
-platform_texture = 4
-
-[node name="Platform5" parent="." unique_id=1565027711 instance=ExtResource("1_1lweu")]
-position = Vector2(-818, -23)
-platform_texture = 4
-
-[node name="Platform6" parent="." unique_id=808065307 instance=ExtResource("1_1lweu")]
-position = Vector2(-452, -15)
-platform_texture = 4
-
-[node name="Platform7" parent="." unique_id=1058499300 instance=ExtResource("1_1lweu")]
-position = Vector2(-408, -30)
-platform_texture = 4
-
-[node name="Platform8" parent="." unique_id=627711849 instance=ExtResource("1_1lweu")]
-position = Vector2(-371, -11)
-platform_texture = 4
-
-[node name="Platform9" parent="." unique_id=1625240790 instance=ExtResource("1_1lweu")]
-position = Vector2(-280, -12)
-platform_texture = 4
-
-[node name="Platform10" parent="." unique_id=925574430 instance=ExtResource("1_1lweu")]
-position = Vector2(-197, -25)
-platform_texture = 4
-
-[node name="Platform11" parent="." unique_id=1252350270 instance=ExtResource("1_1lweu")]
-position = Vector2(-155, -16)
-platform_texture = 4
-
-[node name="Platform12" parent="." unique_id=418040567 instance=ExtResource("1_1lweu")]
-position = Vector2(-112, -24)
-platform_texture = 4
-
-[node name="Platform13" parent="." unique_id=1492936165 instance=ExtResource("1_1lweu")]
-position = Vector2(-71, -12)
-platform_texture = 4
-
-[node name="Platform14" parent="." unique_id=902108135 instance=ExtResource("1_1lweu")]
-position = Vector2(-24, -9)
-platform_texture = 4
-
-[node name="Platform15" parent="." unique_id=2055869069 instance=ExtResource("1_1lweu")]
-position = Vector2(23, -11)
-platform_texture = 4
-
-[node name="Platform28" parent="." unique_id=755759843 instance=ExtResource("1_1lweu")]
-position = Vector2(-1675, -27)
-platform_texture = 4
-
-[node name="Platform29" parent="." unique_id=1590896941 instance=ExtResource("1_1lweu")]
-position = Vector2(-909, -19)
-platform_texture = 4
-
-[node name="Platform30" parent="." unique_id=225292478 instance=ExtResource("1_1lweu")]
-position = Vector2(-726, -5)
-platform_texture = 4
-
-[node name="Platform31" parent="." unique_id=1575346847 instance=ExtResource("1_1lweu")]
-position = Vector2(-322, -25)
-platform_texture = 4
-
-[node name="Platform32" parent="." unique_id=1391839075 instance=ExtResource("1_1lweu")]
-position = Vector2(-1749, -30)
-platform_texture = 4
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=566044017]
+stream = ExtResource("8_geoi6")
+volume_db = -17.212
+autoplay = true
 
 [connection signal="timeout" from="ThrowingObjTimer" to="." method="_on_throwing_obj_timer_timeout"]
+[connection signal="timeout" from="ThrowingObjTimer2" to="." method="_on_throwing_obj_timer_2_timeout"]

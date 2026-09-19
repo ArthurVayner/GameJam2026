@@ -309,12 +309,14 @@ position = Vector2(-45, 128)
 
 [node name="Wall" type="Sprite2D" parent="." unique_id=755569080]
 z_index = -1
+texture_filter = 1
 position = Vector2(-79, -372)
 texture = ExtResource("4_fuudy")
 metadata/_edit_lock_ = true
 
 [node name="Wall2" type="Sprite2D" parent="." unique_id=416073432]
 z_index = -1
+texture_filter = 1
 position = Vector2(81, -372)
 scale = Vector2(-1, 1)
 texture = ExtResource("4_fuudy")
