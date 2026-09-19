@@ -86,7 +86,7 @@ position = Vector2(-79, 11)
 platform_texture = 2
 
 [node name="Platform3" parent="Platforms2" unique_id=1209998876 instance=ExtResource("1_0ba56")]
-position = Vector2(0, 1)
+position = Vector2(87, 40)
 platform_texture = 2
 
 [node name="Platform4" parent="Platforms2" unique_id=1901783273 instance=ExtResource("1_0ba56")]
@@ -158,7 +158,7 @@ scale = Vector2(-1, 1)
 platform_texture = 3
 
 [node name="Platform12" parent="Platforms2" unique_id=2119751737 instance=ExtResource("1_0ba56")]
-position = Vector2(90, -1)
+position = Vector2(132, 115)
 scale = Vector2(-1, 1)
 platform_texture = 3
 
@@ -200,22 +200,22 @@ platform_texture = 4
 [node name="Platform48" parent="Platforms3" unique_id=1450869193 instance=ExtResource("1_0ba56")]
 position = Vector2(115, 33)
 scale = Vector2(-1, 1)
-platform_texture = 5
+platform_texture = 4
 
 [node name="Platform46" parent="Platforms3" unique_id=1840975956 instance=ExtResource("1_0ba56")]
 position = Vector2(115, -47)
 scale = Vector2(-1, 1)
-platform_texture = 5
+platform_texture = 4
 
 [node name="Platform42" parent="Platforms3" unique_id=1490525365 instance=ExtResource("1_0ba56")]
 position = Vector2(115, -226)
 scale = Vector2(-1, 1)
-platform_texture = 5
+platform_texture = 4
 
 [node name="Platform40" parent="Platforms3" unique_id=1070696258 instance=ExtResource("1_0ba56")]
 position = Vector2(115, -349)
 scale = Vector2(-1, 1)
-platform_texture = 5
+platform_texture = 4
 
 [node name="Platforms4" type="Node2D" parent="." unique_id=12791298]
 
@@ -250,7 +250,7 @@ scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform9" parent="Platforms4" unique_id=1775590353 instance=ExtResource("1_0ba56")]
-position = Vector2(56, -320)
+position = Vector2(-26, 35)
 scale = Vector2(-1, 1)
 platform_texture = 7
 
@@ -393,7 +393,7 @@ platform_texture = 5
 position = Vector2(85, 100)
 
 [node name="BirdSpawnPlatform3" parent="Node2D" unique_id=463594167 instance=ExtResource("1_8rbpu")]
-position = Vector2(6, 8)
+position = Vector2(-7, 40)
 direction = -1
 
 [node name="BirdSpawnPlatform4" parent="Node2D" unique_id=1198272275 instance=ExtResource("1_8rbpu")]
