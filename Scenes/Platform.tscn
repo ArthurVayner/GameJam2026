@@ -1,31 +1,30 @@
 [gd_scene format=3 uid="uid://dtcf2dn0fgyae"]
 
 [ext_resource type="Script" uid="uid://cfcugiim5isip" path="res://Scripts/Platform.gd" id="1_pquxj"]
-[ext_resource type="Texture2D" uid="uid://damf6jiqs87yv" path="res://Assets/images/Platform2.png" id="2_p2t55"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n7cf"]
-size = Vector2(24, 8)
+[ext_resource type="Texture2D" uid="uid://d01gckb14x8cg" path="res://Assets/images/Platform.png" id="2_8n7cf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti7u"]
-size = Vector2(24, 2)
+size = Vector2(24, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vayem"]
+size = Vector2(23, 2)
 
 [node name="Platform" type="StaticBody2D" unique_id=1291661622]
 script = ExtResource("1_pquxj")
-platform_texture = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854075000]
 position = Vector2(-1, 6)
-texture = ExtResource("2_p2t55")
+texture = ExtResource("2_8n7cf")
 offset = Vector2(1, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1573073489]
-shape = SubResource("RectangleShape2D_8n7cf")
+shape = SubResource("RectangleShape2D_kti7u")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=646678644]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1561203732]
 position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_kti7u")
+shape = SubResource("RectangleShape2D_vayem")
 debug_color = Color(1, 0, 0, 0.4)
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

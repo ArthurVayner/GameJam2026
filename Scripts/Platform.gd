@@ -2,7 +2,7 @@
 extends StaticBody2D
 
 
-enum PLATFROM_TEXTURE {ONE, ONE_ROTATED, TWO, TWO_ROTATED, THREE, THREE_ROTATED, FOUR, FOUR_ROTATED, INVISIBLE}
+enum PLATFROM_TEXTURE {ONE, ONE_ROTATED, TWO, TWO_ROTATED, THREE, THREE_ROTATED, FOUR, FOUR_ROTATED,BOSS, INVISIBLE}
 @export var platform_texture: PLATFROM_TEXTURE
 
 
@@ -71,6 +71,8 @@ func set_texture() -> void:
 		PLATFROM_TEXTURE.FOUR_ROTATED:
 			sprite_2d.texture = load("res://Assets/images/Platform4.png")
 			scale.x = -1
+		PLATFROM_TEXTURE.BOSS:
+			sprite_2d.texture = load("res://Assets/images/Boss_Platfrom.png")
 		9:
 			sprite_2d.texture = null
 

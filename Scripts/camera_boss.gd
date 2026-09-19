@@ -16,8 +16,7 @@ var camera_speed = 0
 var is_cutscene: bool = true
 
 func _ready() -> void:
-	global_position = crown.global_position
-	global_position.y -= camera_y_offset
+	pass
 
 func die():
 	print("11")

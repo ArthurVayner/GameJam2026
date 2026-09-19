@@ -3,6 +3,8 @@ extends Node2D
 const throwing_object = preload("res://Scenes/ThrownObject.tscn")
 @onready var throwing_obj_timer: Timer = $ThrowingObjTimer
 @onready var boss: Sprite2D = $Boss
+@onready var player: Player = $Player
+
 
 var throwing_object_interval: int = 0.5
 
@@ -23,7 +25,8 @@ func spawn_throwing_object() -> void:
 func _on_throwing_obj_timer_timeout() -> void:
 	var y_offset = [15,20,25,30,35,40,45].pick_random()
 	var object = throwing_object.instantiate()
-	object.position = Vector2(boss.position.x, boss.position.y + y_offset)
+	object.position = Vector2(boss.position.x, boss.position.y)
+	object.look_at_player(player)
 	add_child(object)
-	#print("object spawned")
+	print("object spawned")
 	throwing_obj_timer.start(throwing_object_interval)
