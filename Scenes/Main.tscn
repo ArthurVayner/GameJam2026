@@ -13,7 +13,7 @@ script = ExtResource("1_pbw6q")
 script = ExtResource("2_v1gob")
 
 [node name="Level" parent="." unique_id=462795862 instance=ExtResource("5_vy5pj")]
-position = Vector2(-96, -56)
+position = Vector2(-10, -75)
 
 [node name="FallingObjTimer" type="Timer" parent="." unique_id=1908308091]
 
@@ -23,7 +23,7 @@ speed = 0.0
 speedup = 0.0
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
-position = Vector2(58, 63)
+position = Vector2(22, -195)
 
 [node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
 
