@@ -23,7 +23,7 @@ speed = 0.0
 speedup = 0.0
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
-position = Vector2(22, -195)
+position = Vector2(-88, -263)
 
 [node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
 
