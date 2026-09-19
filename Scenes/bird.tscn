@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://b2p0i77falbmd" path="res://Scripts/bird.gd" id="1_mcegt"]
 [ext_resource type="Texture2D" uid="uid://dhfiomtc0xjib" path="res://Assets/images/bird_new.png" id="2_dnvpi"]
-[ext_resource type="AudioStream" uid="uid://da4e7lhwi80y5" path="res://Assets/Objects/bird_flap_maybeIDK.wav" id="3_dnvpi"]
+[ext_resource type="AudioStream" uid="uid://djm6qjf8oichg" path="res://Assets/Sounds/Bird_Tweet_Final.wav" id="3_dnvpi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygmfd"]
 size = Vector2(12, 8)
 
 [node name="Bird" type="Area2D" unique_id=680903742]
+texture_filter = 1
 script = ExtResource("1_mcegt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=492606444]

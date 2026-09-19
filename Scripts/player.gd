@@ -2,13 +2,11 @@ class_name Player
 extends CharacterBody2D
 
 @onready var stun_timer: Timer = $StunTimer
-@onready var moving_sound_timer: Timer = $MovingSoundTimer
 @onready var jump_buffer_timer: Timer = $JumpBufferTimer
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var stun_effect: Sprite2D = $StunEffect
 
 @onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
-@onready var walk_sfx: AudioStreamPlayer2D = $WalkSFX
 @onready var hit_sfx: AudioStreamPlayer2D = $HitSFX
 
 @export var WALK_SPEED = 100.0
@@ -26,7 +24,7 @@ var can_move: bool = true
 var is_moving: bool = false
 
 func _ready() -> void:
-	moving_sound_timer.start(0.1)
+	pass
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
@@ -86,10 +84,7 @@ func _on_stun_timer_timeout() -> void:
 	stun_effect.visible = false
 
 
-func _on_moving_sound_timer_timeout() -> void:
-	if is_moving and is_on_floor():
-		walk_sfx.play()
-	moving_sound_timer.start(0.296)
+
 	
 func give_knockback(value:Vector2) -> void:
 	hit_sfx.play()

@@ -3,28 +3,33 @@
 [ext_resource type="Script" uid="uid://cfcugiim5isip" path="res://Scripts/Platform.gd" id="1_pquxj"]
 [ext_resource type="Texture2D" uid="uid://d01gckb14x8cg" path="res://Assets/images/Platform.png" id="2_8n7cf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kti7u"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n7cf"]
 size = Vector2(24, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vayem"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kti7u"]
 size = Vector2(23, 2)
 
 [node name="Platform" type="StaticBody2D" unique_id=1291661622]
+texture_filter = 1
 script = ExtResource("1_pquxj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854075000]
+texture_filter = 1
 position = Vector2(-1, 6)
 texture = ExtResource("2_8n7cf")
 offset = Vector2(1, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1573073489]
-shape = SubResource("RectangleShape2D_kti7u")
+texture_filter = 1
+shape = SubResource("RectangleShape2D_8n7cf")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=646678644]
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1561203732]
+texture_filter = 1
 position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_vayem")
+shape = SubResource("RectangleShape2D_kti7u")
 debug_color = Color(1, 0, 0, 0.4)
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

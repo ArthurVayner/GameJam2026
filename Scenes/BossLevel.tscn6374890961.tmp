@@ -35,6 +35,10 @@ platform_texture = 8
 position = Vector2(26, -16)
 platform_texture = 8
 
+[node name="Platform" parent="Platforms" unique_id=172056849 instance=ExtResource("2_uh2k4")]
+position = Vector2(-52, -29)
+platform_texture = 8
+
 [node name="Platform2" parent="Platforms" unique_id=1188671490 instance=ExtResource("2_uh2k4")]
 position = Vector2(68, 14)
 scale = Vector2(1.9999988, 1)
@@ -54,6 +58,18 @@ platform_texture = 8
 
 [node name="Platform11" parent="Platforms" unique_id=800732842 instance=ExtResource("2_uh2k4")]
 position = Vector2(-104, 3)
+platform_texture = 8
+
+[node name="Platform18" parent="Platforms" unique_id=571287857 instance=ExtResource("2_uh2k4")]
+position = Vector2(-285, -18)
+platform_texture = 8
+
+[node name="Platform13" parent="Platforms" unique_id=1681762556 instance=ExtResource("2_uh2k4")]
+position = Vector2(-182, -19)
+platform_texture = 8
+
+[node name="Platform17" parent="Platforms" unique_id=1850923211 instance=ExtResource("2_uh2k4")]
+position = Vector2(-351, -15)
 platform_texture = 8
 
 [node name="Platform15" parent="Platforms" unique_id=768108382 instance=ExtResource("2_uh2k4")]

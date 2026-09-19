@@ -1,10 +1,15 @@
 extends Area2D
 
 
+@onready var player_ded: AudioStreamPlayer2D = $PlayerDed
+
+
 @export var speed: float = 0.05
 @export var speedup: float = 0.05
 @export var speedup_interval: int = 2
 @onready var speed_up_timer: Timer = $SpeedUpTimer
+
+
 
 
 func _process(_delta: float) -> void:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://daou5f2ovbqn5" path="res://Scripts/border.gd" id="1_2u8f6"]
 [ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="2_ls51j"]
+[ext_resource type="AudioStream" uid="uid://dxnqbp4ddc8tb" path="res://Assets/Sounds/Faliing_to_Death_Final.wav" id="3_4jmd5"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g4v7s"]
 
@@ -25,6 +26,9 @@ scale = Vector2(4.3203125, 0.78906256)
 texture = ExtResource("2_ls51j")
 
 [node name="SpeedUpTimer" type="Timer" parent="." unique_id=2092766371]
+
+[node name="PlayerDed" type="AudioStreamPlayer2D" parent="." unique_id=318140478]
+stream = ExtResource("3_4jmd5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="SpeedUpTimer" to="." method="_on_speed_up_timer_timeout"]
