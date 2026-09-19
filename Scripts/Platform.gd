@@ -3,8 +3,11 @@ extends StaticBody2D
 
 
 enum PLATFROM_TEXTURE {ONE, ONE_ROTATED, TWO, TWO_ROTATED, THREE, THREE_ROTATED, FOUR, FOUR_ROTATED,BOSS, INVISIBLE}
-@export var platform_texture: PLATFROM_TEXTURE
-
+@export var platform_texture: PLATFROM_TEXTURE:
+	set(value):
+		platform_texture = value
+		if is_node_ready():
+			set_texture()
 
 @export var color: Color = Color("00fa9a"):
 	set(value):
@@ -50,27 +53,30 @@ func setSize()-> void:
 		
 
 func set_texture() -> void:
+	if sprite_2d:
+		sprite_2d.flip_h = false
+
 	match platform_texture:
 		PLATFROM_TEXTURE.ONE:
 			sprite_2d.texture = load("res://Assets/images/Platform.png")
 		PLATFROM_TEXTURE.ONE_ROTATED:
 			sprite_2d.texture = load("res://Assets/images/Platform.png")
-			scale.x = -1
+			sprite_2d.flip_h = true
 		PLATFROM_TEXTURE.TWO:
 			sprite_2d.texture = load("res://Assets/images/Platform2.png")
 		PLATFROM_TEXTURE.TWO_ROTATED:
 			sprite_2d.texture = load("res://Assets/images/Platform2.png")
-			scale.x = -1
+			sprite_2d.flip_h = true
 		PLATFROM_TEXTURE.THREE:
 			sprite_2d.texture = load("res://Assets/images/Platform3.png")
 		PLATFROM_TEXTURE.THREE_ROTATED:
 			sprite_2d.texture = load("res://Assets/images/Platform3.png")
-			scale.x = -1
+			sprite_2d.flip_h = true
 		PLATFROM_TEXTURE.FOUR:
 			sprite_2d.texture = load("res://Assets/images/Platform4.png")
 		PLATFROM_TEXTURE.FOUR_ROTATED:
 			sprite_2d.texture = load("res://Assets/images/Platform4.png")
-			scale.x = -1
+			sprite_2d.flip_h = true
 		PLATFROM_TEXTURE.BOSS:
 			sprite_2d.texture = load("res://Assets/images/Boss_Platfrom.png")
 		9:
