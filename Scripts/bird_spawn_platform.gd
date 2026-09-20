@@ -2,10 +2,11 @@
 extends "res://Scripts/Platform.gd"
 
 const bird_scene  = preload("res://Scenes/bird.tscn")
-
-
+@onready var spawning_cooldown: Timer = $"../spawningCooldown"
 @onready var detection_area: Area2D = $DetectionArea
 
+var player: Player
+var playerStandOnCooldown: bool = false
 
 func onStandFunc(body:Player) -> void:
 	var parent_direction = get_parent().direction
@@ -13,7 +14,7 @@ func onStandFunc(body:Player) -> void:
 	var new_bird = bird_scene.instantiate()
 		
 	add_child(new_bird)
-	new_bird.spanBirdAwayFromPlayer(body.global_position, parent_bird_distance_from_platform * parent_direction, -5.0)
+	new_bird.spanBirdAwayFromPlayer(Vector2(body.global_position.x, global_position.y - 10), parent_bird_distance_from_platform * parent_direction, -5.0)
 	new_bird.set_direction()
 	
 
@@ -23,13 +24,19 @@ func _ready() -> void:
 	
 	super._ready()	
 	onStand = func (body:Player) -> void:
-		call_deferred("onStandFunc", body)
+		player = body
+		if spawning_cooldown.is_stopped():
+			call_deferred("onStandFunc", body)
+			spawning_cooldown.start(1)
+		else:
+			playerStandOnCooldown = true
 		print("player is on my nest")
 	pass
 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
+
+func _on_spawning_cooldown_timeout() -> void:
+	if playerStandOnCooldown:
+		onStandFunc(player)
+	playerStandOnCooldown = false
