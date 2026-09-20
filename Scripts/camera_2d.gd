@@ -9,7 +9,7 @@ const maxRight = 140
 const camera_y_offset = 30
 
 func die():
-	print("11")
+	print("this should not get called, player can't die here")
 	get_tree().reload_current_scene()
 
 func calculatePosition(curent:float,target:float,delta:float) ->float:
