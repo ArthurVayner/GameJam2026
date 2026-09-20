@@ -18,6 +18,7 @@ config/icon="res://GameJab2026/icon.svg"
 [autoload]
 
 NewAutoloadScript="*uid://bgfexl46880iq"
+GameState="*uid://be06u7frh1r6"
 
 [display]
 

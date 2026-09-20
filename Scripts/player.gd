@@ -30,7 +30,12 @@ var got_crown: bool = false
 var player_lose: bool = false
 
 func _ready() -> void:
-	pass
+	if GameState.checkpoint_position != null:
+		position = GameState.checkpoint_position
+
+func _process(delta: float) -> void:
+	if position.y < -550:
+		GameState.checkpoint_position = Vector2(0,-600)
 
 func _physics_process(delta: float) -> void:
 	if got_crown or player_lose:
