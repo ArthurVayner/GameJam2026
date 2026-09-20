@@ -6,7 +6,7 @@ extends Area2D
 
 
 var direction: int = 1
-var speed = 140.0
+var speed = 160.0
 
 func set_direction() -> void:
 	sprite_2d.flip_h = direction == 1
