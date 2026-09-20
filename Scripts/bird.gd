@@ -2,9 +2,14 @@ extends Area2D
 
 @onready var flapping_sound: AudioStreamPlayer2D = $FlappingSound
 @onready var flapping_sound_timer: Timer = $FlappingSoundTimer
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 var direction: int = 1
 var speed = 140.0
+
+func set_direction() -> void:
+	if direction == 1:
+		sprite_2d.flip_h = true
 
 func spanBirdAwayFromPlayer(player_position: Vector2, distance: float, yPositionOffset: float)-> void:
 	direction = -sign(distance)
@@ -15,9 +20,8 @@ func spanBirdAwayFromPlayer(player_position: Vector2, distance: float, yPosition
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	set_direction()
 	flapping_sound_timer.start(0.5)
-	print("bird booste")
-	pass # Replace with function body.
 
 func _physics_process(delta: float) -> void:
 	position.x += delta * speed * direction

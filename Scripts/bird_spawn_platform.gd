@@ -18,8 +18,8 @@ func _ready() -> void:
 	onStand = func (body:Player) -> void:
 		var new_bird = bird_scene.instantiate()
 			
-		add_child(new_bird)
 		new_bird.spanBirdAwayFromPlayer(body.global_position, parent_bird_distance_from_platform * parent_direction, -5.0)
+		add_child(new_bird)
 		print("player is on my nest")
 	pass
 
