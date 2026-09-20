@@ -4,8 +4,8 @@ extends Camera2D
 
 @export var smooth_speed: float = 5.0
 
-const maxLeft = -195
-const maxRight = 140
+const maxLeft = -89
+const maxRight = 71
 const camera_y_offset = 30
 
 func die():
@@ -22,7 +22,7 @@ func calculatePosition(curent:float,target:float,delta:float) ->float:
 func _process(delta: float) -> void:
 	var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
 	#clamp(value: Variant, min: Variant, max: Variant)
-	global_position.x= fallowPlayerPosition
+	global_position.x= clamp(fallowPlayerPosition, maxLeft, maxRight)
 	global_position.y= calculatePosition(global_position.y, player.global_position.y - camera_y_offset, delta)
 	
 	
