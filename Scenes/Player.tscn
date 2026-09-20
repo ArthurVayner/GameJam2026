@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://o7jkida1e3y1" path="res://Scripts/player.gd" id="1_gntrk"]
 [ext_resource type="Texture2D" uid="uid://dcqljo46n2cpy" path="res://Assets/Player Animation/Player_Idle.png" id="2_5ixxa"]
 [ext_resource type="Texture2D" uid="uid://cceexonb6yej0" path="res://Assets/Player Animation/Player_jump.png" id="3_52ee3"]
-[ext_resource type="Texture2D" uid="uid://57em6ilasa3x" path="res://Assets/Player Animation/Player_left.png" id="3_nn08x"]
+[ext_resource type="Texture2D" uid="uid://57em6ilasa3x" path="res://Assets/Player Animation/Player_run.png" id="3_nn08x"]
 [ext_resource type="Texture2D" uid="uid://dquddf3aymb07" path="res://Assets/Player Animation/Player_stunned.png" id="4_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://bi70aeqgcj7xg" path="res://Assets/Player Animation/Player_jump2.png" id="4_megsn"]
 [ext_resource type="AudioStream" uid="uid://bx0vtr5n0m2ft" path="res://Assets/Player/Jump_Reworked_Final.wav" id="4_nn08x"]
 [ext_resource type="AudioStream" uid="uid://bmy1pu6cuc7jf" path="res://Assets/Player/Jack_hit_by_rock_or_whatever.wav" id="5_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://dnk1cgh7ly8xs" path="res://Assets/Player Animation/Player_run2.png" id="6_bhhdu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -19,12 +21,15 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": ExtResource("3_52ee3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_megsn")
 }],
 "loop": 0,
 "name": &"Jump",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -39,7 +44,7 @@ animations = [{
 "texture": ExtResource("3_nn08x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_5ixxa")
+"texture": ExtResource("6_bhhdu")
 }],
 "loop": 1,
 "name": &"Walk",
@@ -56,9 +61,9 @@ script = ExtResource("1_gntrk")
 texture_filter = 1
 position = Vector2(0, -3.8146973e-06)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"Walk"
+animation = &"Jump"
 autoplay = "Idle"
-frame_progress = 0.09260932
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461626614]
 shape = SubResource("RectangleShape2D_uh2k4")

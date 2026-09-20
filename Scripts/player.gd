@@ -101,4 +101,8 @@ func give_knockback(value:Vector2) -> void:
 	hit_sfx.play()
 	velocity += value
 	velocity.y = max(velocity.y, -250)
-	print('velocity.y give_knockback',velocity.y)
+	
+
+
+func game_win():  #transition to winning screen
+	get_tree().change_scene_to_file("res://Scenes/winning_scene.tscn")

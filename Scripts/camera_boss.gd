@@ -2,10 +2,15 @@ extends Camera2D
 
 @onready var player: Player = $".."
 @onready var boss: Node2D = $"../../Boss"
+@onready var instruction: Label = $"../../Instruction"
+
 
 
 @onready var platform_to_delete1: StaticBody2D = $"../../Platforms to delete/Platform"
 @onready var platform_to_delete2: StaticBody2D = $"../../Platforms to delete/Platform2"
+@onready var remove_label_timer: Timer = $"../RemoveLabel"
+
+
 
 
 @export var smooth_speed: float = 5.0
@@ -42,6 +47,8 @@ func _process(delta: float) -> void:
 			is_cutscene = false
 			platform_to_delete1.queue_free()
 			platform_to_delete2.queue_free()
+			remove_label_timer.start(1)
+			
 			
 	else:
 		var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
@@ -51,5 +58,6 @@ func _process(delta: float) -> void:
 	
 	
 	
-	
-	
+func _on_remove_label_timeout() -> void:
+	if instruction:
+		instruction.queue_free()

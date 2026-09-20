@@ -42,4 +42,7 @@ animation = &"Falling"
 autoplay = "Falling"
 frame_progress = 0.9131544
 
+[node name="DeletionTimer" type="Timer" parent="." unique_id=1446010269]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="DeletionTimer" to="." method="_on_deletion_timer_timeout"]

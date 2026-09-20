@@ -6,7 +6,6 @@ const throwing_object = preload("res://Scenes/ThrownObject.tscn")
 
 
 
-
 @onready var throwing_obj_timer: Timer = $ThrowingObjTimer
 @onready var throwing_obj_timer_2: Timer = $ThrowingObjTimer2
 @onready var boss: Node2D = $Boss
@@ -29,8 +28,6 @@ func object_spawn() -> void:
 	var object = throwing_object.instantiate()
 	object.global_position = Vector2(boss.global_position.x, boss.global_position.y - offset)
 	add_child(object)
-	print(object.global_position)
-	print(boss.global_position)
 	boss_throw_sfx.play()
 
 
