@@ -13,7 +13,7 @@ const bird_scene  = preload("res://Scenes/bird.tscn")
 
 
 var falling_object_offset: int = 200
-var falling_object_interval: int = 4
+var falling_object_interval: int = 2
 
 func reset_bird_timer() -> void:
 	bird_timer.start(randf_range(2,7))

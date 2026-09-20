@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bxfp7fxq17psp"]
 
+[ext_resource type="Script" uid="uid://hpd6is15yfcb" path="res://Scripts/main_menu.gd" id="1_tt5f1"]
+
 [node name="MainMenu" type="Node2D" unique_id=425854322]
+script = ExtResource("1_tt5f1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1653976924]
-offset_left = 6.0
-offset_top = 106.0
-offset_right = 171.0
-offset_bottom = 124.0
+offset_left = 3.0
+offset_top = 129.0
+offset_right = 168.0
+offset_bottom = 147.0
 theme_override_font_sizes/normal_font_size = 10
 theme_override_font_sizes/bold_font_size = 16
 theme_override_font_sizes/bold_italics_font_size = 16

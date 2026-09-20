@@ -25,8 +25,9 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		var player = body
-		player.visible = false
+		player.player_icon.play("Stunned")
 		player.can_move = false
+		player.player_lose = true
 		border_stop()
 		player_ded.play()
 		restart_timer.start(restart_interval)

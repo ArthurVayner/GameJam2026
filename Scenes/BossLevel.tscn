@@ -71,107 +71,129 @@ metadata/_edit_lock_ = true
 [node name="BossRoomBorder" type="Sprite2D" parent="BGs" unique_id=1377125805]
 position = Vector2(-1497, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder2" type="Sprite2D" parent="BGs" unique_id=843551304]
 position = Vector2(-1711, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder3" type="Sprite2D" parent="BGs" unique_id=232793809]
 z_index = -1
 position = Vector2(-1676, 18)
 rotation = -1.5707964
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder4" type="Sprite2D" parent="BGs" unique_id=167278008]
 position = Vector2(-642, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder5" type="Sprite2D" parent="BGs" unique_id=72614282]
 position = Vector2(-856, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder6" type="Sprite2D" parent="BGs" unique_id=2066424692]
 position = Vector2(-1070, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder7" type="Sprite2D" parent="BGs" unique_id=1768849288]
 position = Vector2(-1284, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder8" type="Sprite2D" parent="BGs" unique_id=1203339821]
 position = Vector2(-428, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder9" type="Sprite2D" parent="BGs" unique_id=29651600]
 position = Vector2(-214, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder10" type="Sprite2D" parent="BGs" unique_id=1666470449]
 position = Vector2(-1, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder11" type="Sprite2D" parent="BGs" unique_id=425070276]
 position = Vector2(-1497, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder12" type="Sprite2D" parent="BGs" unique_id=2083713696]
 position = Vector2(-1283, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder13" type="Sprite2D" parent="BGs" unique_id=748525115]
 position = Vector2(-1069, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder14" type="Sprite2D" parent="BGs" unique_id=1331968962]
 position = Vector2(-855, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder15" type="Sprite2D" parent="BGs" unique_id=747944497]
 position = Vector2(-641, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder16" type="Sprite2D" parent="BGs" unique_id=1833535822]
 position = Vector2(-427, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder17" type="Sprite2D" parent="BGs" unique_id=428053923]
 position = Vector2(-213, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder18" type="Sprite2D" parent="BGs" unique_id=1143546484]
 position = Vector2(1, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder19" type="Sprite2D" parent="BGs" unique_id=1929175468]
 z_index = -1
 position = Vector2(178, 20)
 rotation = 1.5707964
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder20" type="Sprite2D" parent="BGs" unique_id=77181419]
 position = Vector2(-1711, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder21" type="Sprite2D" parent="BGs" unique_id=2083097900]
 position = Vector2(213, 144)
 rotation = 3.1415927
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="BossRoomBorder22" type="Sprite2D" parent="BGs" unique_id=1621635419]
 position = Vector2(213, -144)
 texture = ExtResource("4_cfxsl")
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("3_qxb48")]
-position = Vector2(-1473, -31)
+position = Vector2(-1519, -31)
 WALK_SPEED = 75.0
 JUMP_VELOCITY = -250.0
 
@@ -366,7 +388,7 @@ theme_override_font_sizes/font_size = 4
 text = "I  must  take  hi s  cr own"
 
 [node name="DeleteTS" parent="." unique_id=111879201 instance=ExtResource("2_uh2k4")]
-position = Vector2(-1473, -20)
+position = Vector2(-1519, -20)
 platform_texture = 8
 
 [node name="Boss" parent="." unique_id=858446088 instance=ExtResource("8_geoi6")]

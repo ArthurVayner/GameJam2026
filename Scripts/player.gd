@@ -27,12 +27,13 @@ func get_overspeeding_acceleration(direction: float) -> float:
 var can_move: bool = true
 var is_moving: bool = false
 var got_crown: bool = false
+var player_lose: bool = false
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	if got_crown:
+	if got_crown or player_lose:
 		return
 	if is_on_floor():
 		coyote_timer.start(0.1)

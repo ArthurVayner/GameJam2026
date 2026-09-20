@@ -1,11 +1,32 @@
 [gd_scene format=3 uid="uid://0htmnpu8ywdo"]
 
+[ext_resource type="Texture2D" uid="uid://cvpem18k4t8i2" path="res://Assets/images/Boss_BG_final.png" id="1_8702y"]
+[ext_resource type="Texture2D" uid="uid://cmg6yde6jkrq7" path="res://Assets/images/Player_Win.png" id="2_vq772"]
+[ext_resource type="AudioStream" uid="uid://cg02s6h17qs4g" path="res://Assets/Sounds/GameJam_Thoughts_of_Climbing.wav" id="3_vq772"]
+
 [node name="WinningScene" type="Node2D" unique_id=238081156]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1754488203]
-offset_left = 33.0
-offset_top = 55.0
-offset_right = 119.0
-offset_bottom = 95.0
+offset_left = 42.0
+offset_top = 119.0
+offset_right = 153.0
+offset_bottom = 143.0
+size_flags_horizontal = 4
 bbcode_enabled = true
-text = "[wave][font=uid://cietqsorg0cbm]YOU WIN"
+text = "[color=CFB53B] [wave][font=uid://cietqsorg0cbm]YOU WIN"
+
+[node name="BossBgFinal" type="Sprite2D" parent="." unique_id=1871103756]
+z_index = -1
+texture_filter = 1
+position = Vector2(107, 72)
+texture = ExtResource("1_8702y")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1389927835]
+texture_filter = 1
+position = Vector2(21, 116)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_vq772")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1562401090]
+stream = ExtResource("3_vq772")
+autoplay = true
