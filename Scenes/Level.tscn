@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://damf6jiqs87yv" path="res://Assets/images/Platform2.png" id="6_or7tv"]
 [ext_resource type="Texture2D" uid="uid://rxbwlj66d75r" path="res://Assets/images/Platform3.png" id="7_133si"]
 [ext_resource type="Texture2D" uid="uid://c5aobqv6bk4of" path="res://Assets/images/Platform4.png" id="8_esopp"]
-[ext_resource type="AudioStream" uid="uid://c2wlx30wyurs7" path="res://Assets/Sounds/GameJam_Higher_Still_Higher_TrumpetMIX.wav" id="10_133si"]
+[ext_resource type="AudioStream" uid="uid://ddp1r0sf2sfwv" path="res://Assets/Sounds/Going_to_Boss_Final.wav" id="10_133si"]
+[ext_resource type="AudioStream" uid="uid://c2wlx30wyurs7" path="res://Assets/Sounds/GameJam_Higher_Still_Higher_TrumpetMIX.wav" id="11_esopp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(25, 40)
@@ -114,7 +115,6 @@ platform_texture = 8
 [node name="Platform19" parent="Platforms2" unique_id=1749957034 instance=ExtResource("1_0ba56")]
 position = Vector2(-33, -812)
 scale = Vector2(-1, 1)
-platform_texture = 7
 
 [node name="Platforms3" type="Node2D" parent="." unique_id=827001060]
 
@@ -317,20 +317,20 @@ direction = -1
 
 [node name="BirdSpawnPlatform6" parent="Node2D" unique_id=1906706507 instance=ExtResource("1_8rbpu")]
 position = Vector2(57, -397)
-platform_texture = 4
+platform_texture = 3
 
 [node name="BirdSpawnPlatform7" parent="Node2D" unique_id=1627795556 instance=ExtResource("1_8rbpu")]
 position = Vector2(-61, -58)
-platform_texture = 4
+platform_texture = 6
 
 [node name="BirdSpawnPlatform8" parent="Node2D" unique_id=940011380 instance=ExtResource("1_8rbpu")]
 position = Vector2(37, -246)
-platform_texture = 5
+platform_texture = 1
 
 [node name="BirdSpawnPlatform10" parent="Node2D" unique_id=1417558188 instance=ExtResource("1_8rbpu")]
 position = Vector2(-61, -461)
 bird_distance_from_platform = 150.0
-platform_texture = 4
+platform_texture = 2
 
 [node name="BirdSpawnPlatform9" parent="Node2D" unique_id=1716594324 instance=ExtResource("1_8rbpu")]
 position = Vector2(72, -89)
@@ -353,44 +353,41 @@ platform_texture = 1
 [node name="BirdSpawnPlatform14" parent="Node2D" unique_id=1957208992 instance=ExtResource("1_8rbpu")]
 position = Vector2(16, -665)
 bird_distance_from_platform = 150.0
-platform_texture = 5
+platform_texture = 6
 
 [node name="BirdSpawnPlatform15" parent="Node2D" unique_id=83486693 instance=ExtResource("1_8rbpu")]
 position = Vector2(81, -606)
 direction = -1
 bird_distance_from_platform = 150.0
-platform_texture = 5
+platform_texture = 6
 
 [node name="BirdSpawnPlatform16" parent="Node2D" unique_id=1282982811 instance=ExtResource("1_8rbpu")]
 position = Vector2(-94, -679)
 bird_distance_from_platform = 150.0
-platform_texture = 4
 
 [node name="BirdSpawnPlatform17" parent="Node2D" unique_id=351751929 instance=ExtResource("1_8rbpu")]
 position = Vector2(-73, -644)
 bird_distance_from_platform = 150.0
-platform_texture = 4
 
 [node name="BirdSpawnPlatform18" parent="Node2D" unique_id=1394390995 instance=ExtResource("1_8rbpu")]
 position = Vector2(12, -730)
 bird_distance_from_platform = 150.0
-platform_texture = 5
+platform_texture = 3
 
 [node name="BirdSpawnPlatform19" parent="Node2D" unique_id=2121060403 instance=ExtResource("1_8rbpu")]
 position = Vector2(46, -634)
 direction = -1
 bird_distance_from_platform = 150.0
-platform_texture = 5
+platform_texture = 3
 
 [node name="BirdSpawnPlatform20" parent="Node2D" unique_id=2035533653 instance=ExtResource("1_8rbpu")]
 position = Vector2(81, -774)
 bird_distance_from_platform = 150.0
-platform_texture = 4
 
 [node name="BirdSpawnPlatform21" parent="Node2D" unique_id=1837479479 instance=ExtResource("1_8rbpu")]
 position = Vector2(22, -788)
 bird_distance_from_platform = 150.0
-platform_texture = 5
+platform_texture = 6
 
 [node name="Platform15" parent="." unique_id=162194228 instance=ExtResource("1_0ba56")]
 position = Vector2(15, -363)
@@ -406,6 +403,10 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="BossTransition" type="AudioStreamPlayer" parent="." unique_id=772537108]
 stream = ExtResource("10_133si")
 volume_db = -5.493
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1164516970]
+stream = ExtResource("11_esopp")
+volume_db = -5.859
 autoplay = true
 
 [connection signal="body_entered" from="LevelTransition" to="." method="_on_level_transition_body_entered"]

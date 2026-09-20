@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var main_theme: AudioStreamPlayer = $MainTheme
 @onready var boss_transition_sfx: AudioStreamPlayer = $BossTransition
 
 
@@ -16,7 +17,8 @@ func _process(delta: float) -> void:
 func _on_level_transition_body_entered(body: Node2D) -> void:
 	if body is Player:
 		var player = body
-		boss_transition_sfx.stop()
+		main_theme.stop()
+		boss_transition_sfx.play()
 		player.transition_to_boss()
 		
 		

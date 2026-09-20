@@ -37,7 +37,7 @@ var transitioning: bool = false
 
 func _physics_process(delta: float) -> void:
 	if transitioning:
-		velocity.x = -35
+		velocity.x = -28
 		player_gravity(delta)
 		move_and_slide()
 		return
@@ -123,7 +123,7 @@ func give_knockback(value:Vector2) -> void:
 
 func transition_to_boss() -> void:
 	transitioning = true
-	boss_transition.start(2)
+	boss_transition.start(2.5)
 	player_icon.play("Walk")
 	can_move = false
 
