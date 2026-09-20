@@ -193,7 +193,7 @@ texture = ExtResource("4_cfxsl")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("3_qxb48")]
-position = Vector2(-1519, -31)
+position = Vector2(88, 3)
 WALK_SPEED = 75.0
 JUMP_VELOCITY = -250.0
 
@@ -393,7 +393,7 @@ platform_texture = 8
 
 [node name="Boss" parent="." unique_id=858446088 instance=ExtResource("8_geoi6")]
 z_index = 1
-position = Vector2(-1557, 37)
+position = Vector2(-1559, 52)
 
 [connection signal="timeout" from="Player/RemoveLabel" to="." method="_on_remove_label_timeout"]
 [connection signal="timeout" from="Player/RemoveLabel" to="Player/Camera2D" method="_on_remove_label_timeout"]

@@ -1,19 +1,108 @@
 [gd_scene format=3 uid="uid://bxfp7fxq17psp"]
 
 [ext_resource type="Script" uid="uid://hpd6is15yfcb" path="res://Scripts/main_menu.gd" id="1_tt5f1"]
+[ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="2_df05h"]
+[ext_resource type="AudioStream" uid="uid://cg02s6h17qs4g" path="res://Assets/Sounds/GameJam_Thoughts_of_Climbing.wav" id="2_xim88"]
+[ext_resource type="PackedScene" uid="uid://chaxy0kndls4h" path="res://Scenes/BirdSpawnPlatform.tscn" id="4_xim88"]
+[ext_resource type="Texture2D" uid="uid://dxleo46nnbwpb" path="res://Assets/images/trunk.png" id="5_koqhg"]
+[ext_resource type="Texture2D" uid="uid://dcqljo46n2cpy" path="res://Assets/Player Animation/Player_Idle.png" id="6_8um5k"]
+[ext_resource type="Texture2D" uid="uid://drstwqvsxtlm8" path="res://Assets/images/Black_Screen.png" id="6_xim88"]
 
 [node name="MainMenu" type="Node2D" unique_id=425854322]
 script = ExtResource("1_tt5f1")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1997014829]
+stream = ExtResource("2_xim88")
+volume_db = -7.69
+autoplay = true
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1653976924]
-offset_left = 3.0
-offset_top = 129.0
-offset_right = 168.0
-offset_bottom = 147.0
-theme_override_font_sizes/normal_font_size = 10
+offset_left = -70.0
+offset_top = 91.0
+offset_right = 95.0
+offset_bottom = 109.0
+theme_override_font_sizes/normal_font_size = 9
 theme_override_font_sizes/bold_font_size = 16
 theme_override_font_sizes/bold_italics_font_size = 16
 theme_override_font_sizes/italics_font_size = 16
 theme_override_font_sizes/mono_font_size = 16
 bbcode_enabled = true
-text = "[wave][font=uid://cietqsorg0cbm]PRESS ENTER TO START"
+text = "[pulse][font=uid://cietqsorg0cbm]PRESS ENTER TO  START"
+
+[node name="PlayerIdle" type="Sprite2D" parent="." unique_id=1396422865]
+texture_filter = 1
+position = Vector2(0, 138)
+texture = ExtResource("6_8um5k")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerIdle" unique_id=39072840]
+position = Vector2(0, -59)
+
+[node name="BG" type="Node2D" parent="." unique_id=1651904388]
+
+[node name="Platform8" parent="BG" unique_id=1291661622 instance=ExtResource("2_df05h")]
+position = Vector2(-42, 87)
+
+[node name="Platform2" parent="BG" unique_id=367094922 instance=ExtResource("2_df05h")]
+position = Vector2(-79, 11)
+platform_texture = 2
+
+[node name="Platform12" parent="BG" unique_id=910254882 instance=ExtResource("2_df05h")]
+position = Vector2(132, 115)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+platform_texture = 3
+
+[node name="Platform39" parent="BG" unique_id=2048152491 instance=ExtResource("2_df05h")]
+position = Vector2(-113, 73)
+platform_texture = 4
+
+[node name="Platform48" parent="BG" unique_id=988911744 instance=ExtResource("2_df05h")]
+position = Vector2(115, 33)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+platform_texture = 4
+
+[node name="Platform10" parent="BG" unique_id=187885176 instance=ExtResource("2_df05h")]
+position = Vector2(-6, 43)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+platform_texture = 7
+
+[node name="Platform13" parent="BG" unique_id=1109592437 instance=ExtResource("2_df05h")]
+position = Vector2(18, 82)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+platform_texture = 6
+
+[node name="Platform3" parent="BG" unique_id=435837226 instance=ExtResource("2_df05h")]
+position = Vector2(-11, 140)
+rotation = 3.1415927
+scale = Vector2(1, -1.9422277)
+platform_texture = 9
+width = 500.0
+height = 10.0
+
+[node name="BirdSpawnPlatform2" parent="BG" unique_id=916455241 instance=ExtResource("4_xim88")]
+position = Vector2(85, 100)
+
+[node name="BirdSpawnPlatform3" parent="BG" unique_id=1715448450 instance=ExtResource("4_xim88")]
+position = Vector2(53, 50)
+direction = -1
+
+[node name="Trunk" type="Sprite2D" parent="BG" unique_id=1441671018]
+z_index = -1
+texture_filter = 1
+position = Vector2(-80, -356)
+texture = ExtResource("5_koqhg")
+
+[node name="Trunk2" type="Sprite2D" parent="BG" unique_id=761913480]
+z_index = -1
+texture_filter = 1
+position = Vector2(80, -356)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("5_koqhg")
+
+[node name="BlackScreen" type="Sprite2D" parent="BG" unique_id=2052777109]
+position = Vector2(0, 216)
+texture = ExtResource("6_xim88")

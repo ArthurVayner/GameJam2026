@@ -6,10 +6,6 @@ const bird_scene  = preload("res://Scenes/bird.tscn")
 @onready var falling_obj_timer: Timer = $FallingObjTimer
 @onready var bird_timer: Timer = $BirdTimer
 @onready var player: Player = $Player
-@onready var rich_text_label: RichTextLabel = $RichTextLabel
-
-
-
 
 
 var falling_object_offset: int = 200

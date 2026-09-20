@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://cks2as4f3rw3o" path="res://Scripts/camera_2d.gd" id="2_v1gob"]
 [ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="5_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://rjfixp4fo8ft" path="res://Scenes/Level.tscn" id="5_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://drstwqvsxtlm8" path="res://Assets/images/Black_Screen.png" id="6_jw32o"]
 [ext_resource type="PackedScene" uid="uid://bhdtyt6xtb1ug" path="res://Scenes/Border.tscn" id="6_v1gob"]
+[ext_resource type="AudioStream" uid="uid://c2wlx30wyurs7" path="res://Assets/Sounds/GameJam_Higher_Still_Higher_TrumpetMIX.wav" id="7_jw32o"]
 
 [node name="Main" type="Node2D" unique_id=376487417]
 script = ExtResource("1_pbw6q")
@@ -18,26 +20,26 @@ position = Vector2(-10, -75)
 [node name="FallingObjTimer" type="Timer" parent="." unique_id=1908308091]
 
 [node name="Border" parent="." unique_id=483146374 instance=ExtResource("6_v1gob")]
-position = Vector2(-6, 110)
+position = Vector2(-6, 154)
+speed = 0.0
 max_speed = 0.2
+speedup = 0.0
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
 position = Vector2(-1, 47)
 
 [node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1032428525]
-offset_left = -90.0
-offset_top = 22.0
-offset_right = 78.0
-offset_bottom = 40.0
-theme_override_font_sizes/normal_font_size = 10
-theme_override_font_sizes/bold_font_size = 16
-theme_override_font_sizes/bold_italics_font_size = 16
-theme_override_font_sizes/italics_font_size = 16
-theme_override_font_sizes/mono_font_size = 16
-bbcode_enabled = true
-text = "[wave][font=uid://cietqsorg0cbm]PRESS ENTER TO START"
+[node name="BlackScreen" type="Sprite2D" parent="." unique_id=1940947043]
+z_index = -2
+position = Vector2(26.999977, 120)
+scale = Vector2(3.7249997, 1)
+texture = ExtResource("6_jw32o")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=873782839]
+stream = ExtResource("7_jw32o")
+volume_db = -5.493
+autoplay = true
 
 [connection signal="timeout" from="FallingObjTimer" to="." method="_on_falling_obj_timer_timeout"]
 [connection signal="timeout" from="BirdTimer" to="." method="_on_bird_timer_timeout"]
