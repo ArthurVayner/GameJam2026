@@ -25,11 +25,7 @@ max_speed = 0.2
 speedup = 0.0
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
-<<<<<<< HEAD
 position = Vector2(1, -558)
-=======
-position = Vector2(4, -590)
->>>>>>> b839077c13f850b6adcfb9585ce9a01165e69b6c
 
 [node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
 
