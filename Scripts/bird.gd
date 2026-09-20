@@ -8,8 +8,7 @@ var direction: int = 1
 var speed = 140.0
 
 func set_direction() -> void:
-	if direction == 1:
-		sprite_2d.flip_h = true
+	sprite_2d.flip_h = direction == 1
 
 func spanBirdAwayFromPlayer(player_position: Vector2, distance: float, yPositionOffset: float)-> void:
 	direction = -sign(distance)
@@ -28,21 +27,11 @@ func _physics_process(delta: float) -> void:
 	if abs(position.x)>1000:
 		print("queue_free")
 		queue_free()
-		
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	
-	pass
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.give_knockback(Vector2(350 * direction, -100))
 		queue_free()
-	pass # Replace with function body.
-	
-
 
 func _on_falpping_sound_timer_timeout() -> void:
 	flapping_sound.play()
