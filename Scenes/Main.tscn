@@ -20,12 +20,9 @@ position = Vector2(-10, -73)
 
 [node name="Border" parent="." unique_id=483146374 instance=ExtResource("6_v1gob")]
 position = Vector2(-6, 154)
-speed = 0.0
-max_speed = 0.2
-speedup = 0.0
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
-position = Vector2(74, -858)
+position = Vector2(0, 49)
 
 [node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
 

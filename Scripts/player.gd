@@ -35,6 +35,11 @@ var got_crown: bool = false
 var player_lose: bool = false
 var transitioning: bool = false
 
+func _process(_delta: float) -> void:
+	if Input.is_action_pressed("exit"):
+		print("WTFFFFFFF")
+		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+
 func _physics_process(delta: float) -> void:
 	if transitioning:
 		velocity.x = -28

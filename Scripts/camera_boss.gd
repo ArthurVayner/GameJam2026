@@ -25,6 +25,7 @@ var camera_speed = 0
 var is_cutscene: bool = true
 
 func _ready() -> void:
+	player.can_move = false
 	global_position.x = boss.global_position.x
 	global_position.y = player.global_position.y
 
@@ -45,8 +46,8 @@ func _process(delta: float) -> void:
 		camera_speed += camera_acceleration
 		if global_position.x >= player.position.x:
 			is_cutscene = false
-			platform_to_delete1.queue_free()
-			platform_to_delete2.queue_free()
+			#platform_to_delete1.queue_free()
+			#platform_to_delete2.queue_free()
 			remove_label_timer.start(2)
 	else:
 		var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
@@ -59,8 +60,9 @@ func _process(delta: float) -> void:
 		global_position.y= calculatePosition(global_position.y, player.global_position.y, delta)
 	
 	
-func _on_remove_label_timeout() -> void:
+func _on_remove_label_timeout() -> void: #also allows player to move :D 
 	if instruction:
+		player.can_move = true
 		instruction.queue_free()
 
 func player_got_crown() -> bool:

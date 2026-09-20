@@ -29,6 +29,7 @@ animations = [{
 }]
 
 [node name="Boss" type="Node2D" unique_id=858446088]
+position = Vector2(71, 67)
 script = ExtResource("1_smvyy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2088818064]

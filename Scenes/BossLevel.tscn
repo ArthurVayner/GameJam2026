@@ -193,7 +193,8 @@ texture = ExtResource("4_cfxsl")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("3_qxb48")]
-position = Vector2(88, 4)
+z_index = 1
+position = Vector2(88, 3)
 WALK_SPEED = 75.0
 JUMP_VELOCITY = -250.0
 
@@ -368,14 +369,6 @@ platform_texture = 9
 
 [node name="Platforms to delete" type="Node2D" parent="." unique_id=2047864158]
 position = Vector2(-481, 27)
-
-[node name="Platform" parent="Platforms to delete" unique_id=1615585285 instance=ExtResource("2_uh2k4")]
-position = Vector2(553, -24)
-platform_texture = 9
-
-[node name="Platform2" parent="Platforms to delete" unique_id=671217663 instance=ExtResource("2_uh2k4")]
-position = Vector2(562, -33)
-platform_texture = 9
 
 [node name="Instruction" type="Label" parent="." unique_id=204838312]
 z_index = 1

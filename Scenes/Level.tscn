@@ -216,7 +216,7 @@ metadata/_edit_lock_ = true
 [node name="Wall3" type="Sprite2D" parent="." unique_id=1476202640]
 z_index = -2
 texture_filter = 1
-position = Vector2(-79, -749)
+position = Vector2(-79, -747)
 texture = ExtResource("3_5rrr5")
 metadata/_edit_lock_ = true
 
@@ -262,6 +262,13 @@ height = 10.0
 [node name="Platform25" parent="WorldBorders" unique_id=1192568700 instance=ExtResource("1_0ba56")]
 position = Vector2(-164, -623)
 rotation = 1.5707964
+platform_texture = 9
+width = 500.0
+height = 10.0
+
+[node name="Platform26" parent="WorldBorders" unique_id=1393726001 instance=ExtResource("1_0ba56")]
+position = Vector2(0, -889)
+rotation = 3.1415927
 platform_texture = 9
 width = 500.0
 height = 10.0
@@ -406,7 +413,7 @@ volume_db = -5.493
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1164516970]
 stream = ExtResource("11_esopp")
-volume_db = -5.859
+volume_db = -12.817
 autoplay = true
 
 [connection signal="body_entered" from="LevelTransition" to="." method="_on_level_transition_body_entered"]

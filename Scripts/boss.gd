@@ -21,7 +21,7 @@ var boss_can_throw = true
 func _ready() -> void:
 	
 	throwing_obj_timer.start(1)
-	throwing_obj_timer_2.start(1)
+	throwing_obj_timer_2.start(1.5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,13 +43,13 @@ func object_spawn() -> void:
 func _on_throwing_obj_timer_timeout() -> void:
 	if boss_can_throw:
 		object_spawn()
-		var throwing_object_interval: float = [0.8,1].pick_random()
+		var throwing_object_interval: float = [1,1.5].pick_random()
 		throwing_obj_timer.start(throwing_object_interval)
 	
 
 func _on_throwing_obj_timer_2_timeout() -> void:
 	if boss_can_throw:
 		object_spawn()
-		var throwing_object_interval: float = [0.7,0.9].pick_random()
+		var throwing_object_interval: float = [0.5,1].pick_random()
 		throwing_obj_timer_2.start(throwing_object_interval)
 	
