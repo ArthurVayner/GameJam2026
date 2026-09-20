@@ -1,10 +1,50 @@
 [gd_scene format=3 uid="uid://b31r4030t1cl7"]
 
 [ext_resource type="Script" uid="uid://o7jkida1e3y1" path="res://Scripts/player.gd" id="1_gntrk"]
-[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="1_kyqiw"]
-[ext_resource type="Texture2D" uid="uid://d0gctenglg0it" path="res://Assets/Player/Player_Idle.png" id="2_nn08x"]
+[ext_resource type="Texture2D" uid="uid://dcqljo46n2cpy" path="res://Assets/Player Animation/Player_Idle.png" id="2_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://cceexonb6yej0" path="res://Assets/Player Animation/Player_jump.png" id="3_52ee3"]
+[ext_resource type="Texture2D" uid="uid://57em6ilasa3x" path="res://Assets/Player Animation/Player_left.png" id="3_nn08x"]
+[ext_resource type="Texture2D" uid="uid://dquddf3aymb07" path="res://Assets/Player Animation/Player_stunned.png" id="4_bhhdu"]
 [ext_resource type="AudioStream" uid="uid://bx0vtr5n0m2ft" path="res://Assets/Player/Jump_Reworked_Final.wav" id="4_nn08x"]
 [ext_resource type="AudioStream" uid="uid://bmy1pu6cuc7jf" path="res://Assets/Player/Jack_hit_by_rock_or_whatever.wav" id="5_5ixxa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5ixxa")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_52ee3")
+}],
+"loop": 0,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bhhdu")
+}],
+"loop": 1,
+"name": &"Stunned",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nn08x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5ixxa")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 4.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh2k4"]
 size = Vector2(8, 12.5)
@@ -12,21 +52,18 @@ size = Vector2(8, 12.5)
 [node name="Player" type="CharacterBody2D" unique_id=2015687368]
 script = ExtResource("1_gntrk")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1169303563]
+[node name="Icon" type="AnimatedSprite2D" parent="." unique_id=1837347768]
 texture_filter = 1
 position = Vector2(0, -3.8146973e-06)
-texture = ExtResource("2_nn08x")
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"Walk"
+autoplay = "Idle"
+frame_progress = 0.09260932
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461626614]
 shape = SubResource("RectangleShape2D_uh2k4")
 
 [node name="StunTimer" type="Timer" parent="." unique_id=1913667496]
-
-[node name="StunEffect" type="Sprite2D" parent="." unique_id=783387572]
-visible = false
-position = Vector2(0, -6)
-scale = Vector2(0.0625, 0.015625)
-texture = ExtResource("1_kyqiw")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="." unique_id=778852630]
 stream = ExtResource("4_nn08x")

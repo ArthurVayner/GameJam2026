@@ -11,6 +11,7 @@ const bird_scene  = preload("res://Scenes/bird.tscn")
 
 
 
+
 var falling_object_offset: int = 200
 var falling_object_interval: int = 4
 

@@ -4,7 +4,8 @@ extends CharacterBody2D
 @onready var stun_timer: Timer = $StunTimer
 @onready var jump_buffer_timer: Timer = $JumpBufferTimer
 @onready var coyote_timer: Timer = $CoyoteTimer
-@onready var stun_effect: Sprite2D = $StunEffect
+@onready var player_icon: AnimatedSprite2D = $Icon
+
 
 @onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
 @onready var hit_sfx: AudioStreamPlayer2D = $HitSFX
@@ -55,6 +56,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("go_left", "go_right") if can_move else 0.0
 	is_moving= bool(direction)
 	var is_overspeeding = abs(velocity.x) > WALK_SPEED
+	
 
 	if is_overspeeding:
 		var overspeedingAcceleration := get_overspeeding_acceleration(direction)
@@ -62,26 +64,35 @@ func _physics_process(delta: float) -> void:
 	elif direction != 0:
 		var is_turning_around = sign(direction) != sign(velocity.x) and velocity.x != 0
 		var current_accel = ACCELERATION * 2.0 if is_turning_around else ACCELERATION
-		
 		velocity.x = move_toward(velocity.x, direction * WALK_SPEED, current_accel * delta)
 			
 	else:
 		var friction = FRICTION if is_on_floor() and velocity.y >= 0 else AIR_FRICTION
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
-		
+	
+	if can_move and is_on_floor():
+		if abs(velocity.x) > 1.0:
+			player_icon.play("Walk")
+			player_icon.scale.x = -sign(velocity.x)
+		else:
+			player_icon.play("Idle")
+	if can_move and not is_on_floor():
+			player_icon.play("Jump")
+
+	
 	move_and_slide()
 
 
 func player_stunned():
 	hit_sfx.play()
 	can_move = false
-	stun_effect.visible = true
+	player_icon.stop()
+	player_icon.play("Stunned")
 	stun_timer.start(1)
 
 
 func _on_stun_timer_timeout() -> void:
 	can_move = true
-	stun_effect.visible = false
 
 
 

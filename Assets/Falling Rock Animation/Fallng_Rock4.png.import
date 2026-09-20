@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dif0obxxywcwt"
-path="res://.godot/imported/red-asteroid.jpg-5f06afba2f1f261e266b168c0e7f506c.ctex"
+uid="uid://dqur5scuipkp7"
+path="res://.godot/imported/Fallng_Rock4.png-5f7058de67a6d5c023ca1abcec45a8f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/red-asteroid.jpg"
-dest_files=["res://.godot/imported/red-asteroid.jpg-5f06afba2f1f261e266b168c0e7f506c.ctex"]
+source_file="res://Assets/Falling Rock Animation/Fallng_Rock4.png"
+dest_files=["res://.godot/imported/Fallng_Rock4.png-5f7058de67a6d5c023ca1abcec45a8f0.ctex"]
 
 [params]
 
