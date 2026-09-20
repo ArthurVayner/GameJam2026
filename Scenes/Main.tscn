@@ -18,7 +18,7 @@ position = Vector2(-10, -75)
 [node name="FallingObjTimer" type="Timer" parent="." unique_id=1908308091]
 
 [node name="Border" parent="." unique_id=483146374 instance=ExtResource("6_v1gob")]
-position = Vector2(-6, 130)
+position = Vector2(-6, 110)
 max_speed = 0.2
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
