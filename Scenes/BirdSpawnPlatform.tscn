@@ -3,13 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="1_6e32j"]
 [ext_resource type="Script" uid="uid://csus2mdmlode3" path="res://Scenes/bird_spawn_platform.gd" id="1_23cud"]
 [ext_resource type="Script" uid="uid://cu4ra0of5fod7" path="res://Scripts/bird_spawn_platform.gd" id="2_f0lc4"]
+[ext_resource type="Texture2D" uid="uid://dcu0l817prby7" path="res://Assets/images/birds_nest.png" id="4_ym18t"]
 
 [node name="BirdSpawnPlatform" type="Node2D" unique_id=916455241]
 script = ExtResource("1_23cud")
 
 [node name="Platform" parent="." unique_id=1291661622 instance=ExtResource("1_6e32j")]
 script = ExtResource("2_f0lc4")
-platform_texture = 0
 color = Color(0.81960785, 0.91764706, 0.92156863, 1)
 width = 30.0
 height = 4.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=958705781]
+texture_filter = 1
+position = Vector2(1, -8)
+texture = ExtResource("4_ym18t")
