@@ -23,7 +23,7 @@ position = Vector2(22, -972)
 position = Vector2(16, -926)
 
 [node name="Platform4" parent="Platforms1" unique_id=492768401 instance=ExtResource("1_0ba56")]
-position = Vector2(-1, -742)
+position = Vector2(62, -559)
 
 [node name="Platform5" parent="Platforms1" unique_id=1152166992 instance=ExtResource("1_0ba56")]
 position = Vector2(-31, -828)
@@ -83,7 +83,7 @@ position = Vector2(-79, 11)
 platform_texture = 2
 
 [node name="Platform3" parent="Platforms2" unique_id=1209998876 instance=ExtResource("1_0ba56")]
-position = Vector2(-79, -705)
+position = Vector2(-52, -554)
 platform_texture = 2
 
 [node name="Platform4" parent="Platforms2" unique_id=1901783273 instance=ExtResource("1_0ba56")]
@@ -103,11 +103,11 @@ position = Vector2(-77, -333)
 platform_texture = 2
 
 [node name="Platform8" parent="Platforms2" unique_id=183408796 instance=ExtResource("1_0ba56")]
-position = Vector2(-55, -751)
+position = Vector2(88, -561)
 platform_texture = 2
 
 [node name="Platform9" parent="Platforms2" unique_id=232819941 instance=ExtResource("1_0ba56")]
-position = Vector2(26, -718)
+position = Vector2(-18, -548)
 platform_texture = 2
 
 [node name="Platform10" parent="Platforms2" unique_id=1163288423 instance=ExtResource("1_0ba56")]
@@ -247,7 +247,7 @@ scale = Vector2(-1, 1)
 platform_texture = 7
 
 [node name="Platform20" parent="Platforms4" unique_id=1769853610 instance=ExtResource("1_0ba56")]
-position = Vector2(-20, -701)
+position = Vector2(-86, -563)
 scale = Vector2(-1, 1)
 platform_texture = 6
 
@@ -262,7 +262,7 @@ scale = Vector2(-1, 1)
 platform_texture = 6
 
 [node name="Platform15" parent="Platforms4" unique_id=336076253 instance=ExtResource("1_0ba56")]
-position = Vector2(15, -504)
+position = Vector2(16, -497)
 scale = Vector2(-1, 1)
 platform_texture = 6
 
@@ -282,7 +282,7 @@ scale = Vector2(-1, 1)
 platform_texture = 6
 
 [node name="Platform11" parent="Platforms4" unique_id=1500844134 instance=ExtResource("1_0ba56")]
-position = Vector2(58, -705)
+position = Vector2(32, -549)
 scale = Vector2(-1, 1)
 platform_texture = 6
 
@@ -414,5 +414,9 @@ direction = -1
 [node name="BirdSpawnPlatform11" parent="Node2D" unique_id=1124907017 instance=ExtResource("1_8rbpu")]
 position = Vector2(-110, -182)
 direction = -1
-bird_distance_from_platform = 200.0
 platform_texture = 4
+
+[node name="Platform15" parent="." unique_id=162194228 instance=ExtResource("1_0ba56")]
+position = Vector2(3, -391)
+scale = Vector2(-1, 1)
+platform_texture = 6
