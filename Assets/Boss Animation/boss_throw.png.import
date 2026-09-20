@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8llbssnk83ai"
-path="res://.godot/imported/bone4.png-2f30508cf6bc14ab004e08406065c17a.ctex"
+uid="uid://t1qn3xsjgci0"
+path="res://.godot/imported/boss_throw.png-2bd2d64bd077d8e51327273390ce3615.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Bone Animation/bone4.png"
-dest_files=["res://.godot/imported/bone4.png-2f30508cf6bc14ab004e08406065c17a.ctex"]
+source_file="res://Assets/Boss Animation/boss_throw.png"
+dest_files=["res://.godot/imported/boss_throw.png-2bd2d64bd077d8e51327273390ce3615.ctex"]
 
 [params]
 

@@ -83,5 +83,8 @@ one_shot = true
 [node name="CoyoteTimer" type="Timer" parent="." unique_id=1694133414]
 one_shot = true
 
+[node name="WinTransition" type="Timer" parent="." unique_id=323620025]
+
 [connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
 [connection signal="timeout" from="JumpBufferTimer" to="." method="_on_jump_buffer_timer_timeout"]
+[connection signal="timeout" from="WinTransition" to="." method="_on_win_transition_timeout"]

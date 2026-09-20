@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cwls0g65ulkh1"]
 
 [ext_resource type="Script" uid="uid://b6u4776cesq4d" path="res://Scripts/thrown_object.gd" id="1_pd7l6"]
-[ext_resource type="Texture2D" uid="uid://c7qbwr15oecvi" path="res://Assets/Bone Animation/bone1.png" id="2_7yk8e"]
-[ext_resource type="Texture2D" uid="uid://cwc8hokmjnplx" path="res://Assets/Bone Animation/bone4.png" id="3_n7ksq"]
-[ext_resource type="Texture2D" uid="uid://v2mmm0g4fmtr" path="res://Assets/Bone Animation/bone3.png" id="4_87hjt"]
-[ext_resource type="Texture2D" uid="uid://dnaavk4xndtta" path="res://Assets/Bone Animation/skull1.png" id="5_01c70"]
-[ext_resource type="Texture2D" uid="uid://0yi8it85gln4" path="res://Assets/Bone Animation/bone2.png" id="5_uonyd"]
+[ext_resource type="Texture2D" uid="uid://b05yjplcrgoqy" path="res://Assets/Bone Animation/bone.png" id="2_uonyd"]
+[ext_resource type="Texture2D" uid="uid://c8llbssnk83ai" path="res://Assets/Bone Animation/bone4.png" id="3_n7ksq"]
+[ext_resource type="Texture2D" uid="uid://chxd0p02e4rdu" path="res://Assets/Bone Animation/bone 3.png" id="4_vn15j"]
+[ext_resource type="Texture2D" uid="uid://ueuxhm5nso8v" path="res://Assets/Bone Animation/bone2.png" id="5_uonyd"]
 [ext_resource type="Texture2D" uid="uid://cqn063va1jn2d" path="res://Assets/Bone Animation/skull2.png" id="6_uonyd"]
+[ext_resource type="Texture2D" uid="uid://dv4ho0mivpwmf" path="res://Assets/Bone Animation/skull.png" id="6_vn15j"]
 [ext_resource type="Texture2D" uid="uid://cna3dv6upcslw" path="res://Assets/Bone Animation/skull3.png" id="7_vn15j"]
 [ext_resource type="Texture2D" uid="uid://dsmiwaoctkg5e" path="res://Assets/Bone Animation/skull4.png" id="8_1dilq"]
 
@@ -17,16 +17,16 @@ size = Vector2(4.5, 7)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7yk8e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_n7ksq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_87hjt")
+"texture": ExtResource("2_uonyd")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_uonyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vn15j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7ksq")
 }],
 "loop": 1,
 "name": &"bone",
@@ -34,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_01c70")
+"texture": ExtResource("6_vn15j")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_uonyd")
@@ -57,10 +57,11 @@ script = ExtResource("1_pd7l6")
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1252038782]
+z_index = 1
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"bone"
-frame_progress = 0.64475596
+frame_progress = 0.7428011
 
 [node name="DeletionTimer" type="Timer" parent="." unique_id=265473263]
 

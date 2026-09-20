@@ -1,21 +1,16 @@
 [gd_scene format=3 uid="uid://25rlnkcbu5tq"]
 
 [ext_resource type="Texture2D" uid="uid://d3xiepvxm1hgf" path="res://Assets/images/Boss_BG.png" id="1_1lweu"]
-[ext_resource type="Script" uid="uid://bpqtm7or4u01h" path="res://Scripts/boss_level.gd" id="1_eaet5"]
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="2_uh2k4"]
 [ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="3_qxb48"]
-[ext_resource type="Texture2D" uid="uid://bsjl2fjvntfiu" path="res://icon.svg" id="4_7um7k"]
 [ext_resource type="Script" uid="uid://cidvkxj27r6bj" path="res://Scripts/camera_boss.gd" id="4_f6kao"]
-[ext_resource type="AudioStream" uid="uid://d1tbh8ebtq0lm" path="res://Assets/Sounds/Boss_Throw_Final.wav" id="6_doqcq"]
-[ext_resource type="AudioStream" uid="uid://cbxktsjoltgnm" path="res://Assets/Music/Boss_Music.wav" id="8_geoi6"]
-[ext_resource type="PackedScene" uid="uid://b2jcs7ec5hbfn" path="res://Scenes/Crown.tscn" id="9_cfxsl"]
+[ext_resource type="PackedScene" uid="uid://cvy6xc5yvobad" path="res://Scenes/Boss.tscn" id="8_geoi6"]
 [ext_resource type="FontFile" uid="uid://cietqsorg0cbm" path="res://Assets/Pixel Font.ttf" id="10_wq8ps"]
 
 [node name="BossBg" type="Sprite2D" unique_id=1006416001]
 z_index = -1
 texture_filter = 1
 texture = ExtResource("1_1lweu")
-script = ExtResource("1_eaet5")
 metadata/_edit_lock_ = true
 
 [node name="Node2D" type="Node2D" parent="." unique_id=396735062]
@@ -57,7 +52,7 @@ texture = ExtResource("1_1lweu")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("3_qxb48")]
-position = Vector2(88, 3)
+position = Vector2(-1528, -28)
 WALK_SPEED = 75.0
 JUMP_VELOCITY = -250.0
 
@@ -205,19 +200,6 @@ platform_texture = 8
 position = Vector2(-1522, 19)
 platform_texture = 8
 
-[node name="Boss" type="Node2D" parent="." unique_id=1460460206]
-position = Vector2(-1556, 47)
-
-[node name="Boss_Icon" type="Sprite2D" parent="Boss" unique_id=1354676578]
-position = Vector2(0, -20)
-scale = Vector2(0.34374985, 0.3984375)
-texture = ExtResource("4_7um7k")
-
-[node name="Boss_Throw_SFX" type="AudioStreamPlayer2D" parent="Boss" unique_id=106645474]
-position = Vector2(0, -18)
-stream = ExtResource("6_doqcq")
-max_distance = 1000.0
-
 [node name="Borders" type="Node2D" parent="." unique_id=741083743]
 position = Vector2(1, 0)
 
@@ -306,23 +288,23 @@ position = Vector2(-1069, 0)
 texture = ExtResource("1_1lweu")
 metadata/_edit_lock_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=566044017]
-stream = ExtResource("8_geoi6")
-volume_db = -17.212
-autoplay = true
-
-[node name="Node2D2" parent="." unique_id=282216420 instance=ExtResource("9_cfxsl")]
-position = Vector2(-1555, -1)
-
 [node name="Instruction" type="Label" parent="." unique_id=204838312]
 z_index = 1
-offset_left = 25.0
-offset_top = -18.0
-offset_right = 98.0
-offset_bottom = -10.0
+offset_left = 9.0
+offset_top = -12.0
+offset_right = 82.0
+offset_bottom = -4.0
 theme_override_fonts/font = ExtResource("10_wq8ps")
 theme_override_font_sizes/font_size = 4
 text = "I  must  take  hi s  cr own"
+
+[node name="DeleteTS" parent="." unique_id=111879201 instance=ExtResource("2_uh2k4")]
+position = Vector2(-1528, -17)
+platform_texture = 8
+
+[node name="Boss" parent="." unique_id=858446088 instance=ExtResource("8_geoi6")]
+z_index = 1
+position = Vector2(-1557, 37)
 
 [connection signal="timeout" from="Player/RemoveLabel" to="." method="_on_remove_label_timeout"]
 [connection signal="timeout" from="Player/RemoveLabel" to="Player/Camera2D" method="_on_remove_label_timeout"]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cvy6xc5yvobad"]
+
+[ext_resource type="Script" uid="uid://coma35y85e3fv" path="res://Scripts/boss.gd" id="1_smvyy"]
+[ext_resource type="Texture2D" uid="uid://t1qn3xsjgci0" path="res://Assets/Boss Animation/boss_throw.png" id="2_j5nlm"]
+[ext_resource type="PackedScene" uid="uid://b2jcs7ec5hbfn" path="res://Scenes/Crown.tscn" id="2_smvyy"]
+[ext_resource type="Texture2D" uid="uid://cfm32kw4j2wwh" path="res://Assets/Boss Animation/boss_idle.png" id="3_ouxnj"]
+[ext_resource type="AudioStream" uid="uid://d1tbh8ebtq0lm" path="res://Assets/Sounds/Boss_Throw_Final.wav" id="4_me6e5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_doqcq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ouxnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j5nlm")
+}],
+"loop": 1,
+"name": &"Throw",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ouxnj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boss" type="Node2D" unique_id=858446088]
+script = ExtResource("1_smvyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2088818064]
+texture_filter = 1
+position = Vector2(0.5, -25)
+sprite_frames = SubResource("SpriteFrames_doqcq")
+animation = &"Throw"
+frame_progress = 0.45953155
+
+[node name="Crown" parent="." unique_id=282216420 instance=ExtResource("2_smvyy")]
+position = Vector2(-1.5, -47)
+
+[node name="ThrowingObjTimer" type="Timer" parent="." unique_id=671848721]
+
+[node name="ThrowingObjTimer2" type="Timer" parent="." unique_id=1361399743]
+
+[node name="BossThrowSFX" type="AudioStreamPlayer2D" parent="." unique_id=821135830]
+position = Vector2(0.5, -25)
+stream = ExtResource("4_me6e5")
+
+[connection signal="timeout" from="ThrowingObjTimer" to="." method="_on_throwing_obj_timer_timeout"]
+[connection signal="timeout" from="ThrowingObjTimer2" to="." method="_on_throwing_obj_timer_2_timeout"]

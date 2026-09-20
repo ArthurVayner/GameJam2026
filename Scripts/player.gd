@@ -4,6 +4,9 @@ extends CharacterBody2D
 @onready var stun_timer: Timer = $StunTimer
 @onready var jump_buffer_timer: Timer = $JumpBufferTimer
 @onready var coyote_timer: Timer = $CoyoteTimer
+@onready var win_transition: Timer = $WinTransition
+
+
 @onready var player_icon: AnimatedSprite2D = $Icon
 
 
@@ -23,11 +26,14 @@ func get_overspeeding_acceleration(direction: float) -> float:
 
 var can_move: bool = true
 var is_moving: bool = false
+var got_crown: bool = false
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	if got_crown:
+		return
 	if is_on_floor():
 		coyote_timer.start(0.1)
 	
@@ -104,5 +110,11 @@ func give_knockback(value:Vector2) -> void:
 	
 
 
-func game_win():  #transition to winning screen
+
+func game_win():
+	got_crown = true  #transition to winning screen
+	win_transition.start(3)
+
+
+func _on_win_transition_timeout() -> void:
 	get_tree().change_scene_to_file("res://Scenes/winning_scene.tscn")

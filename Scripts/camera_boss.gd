@@ -19,7 +19,7 @@ const maxLeft = -195
 const maxRight = 140
 const camera_y_offset = 10
 const camera_x_offset = -2.5
-const camera_acceleration = 0.001
+const camera_acceleration = 0.0009
 
 var camera_speed = 0
 var is_cutscene: bool = true
@@ -47,17 +47,23 @@ func _process(delta: float) -> void:
 			is_cutscene = false
 			platform_to_delete1.queue_free()
 			platform_to_delete2.queue_free()
-			remove_label_timer.start(1)
-			
-			
+			remove_label_timer.start(2)
 	else:
 		var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
-		#clamp(value: Variant, min: Variant, max: Variant)
 		global_position.x= calculatePosition(global_position.x + camera_x_offset, player.global_position.x,delta)
 		global_position.y= calculatePosition(global_position.y, player.global_position.y - camera_y_offset, delta)
 	
+	if player_got_crown():
+		var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)
+		global_position.x= calculatePosition(global_position.x, player.global_position.x,delta)
+		global_position.y= calculatePosition(global_position.y, player.global_position.y, delta)
 	
 	
 func _on_remove_label_timeout() -> void:
 	if instruction:
 		instruction.queue_free()
+
+func player_got_crown() -> bool:
+	if player.got_crown:
+		return true
+	return false

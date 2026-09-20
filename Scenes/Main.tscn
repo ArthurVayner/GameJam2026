@@ -18,7 +18,7 @@ position = Vector2(-10, -75)
 [node name="FallingObjTimer" type="Timer" parent="." unique_id=1908308091]
 
 [node name="Border" parent="." unique_id=483146374 instance=ExtResource("6_v1gob")]
-position = Vector2(-50, 83)
+position = Vector2(-6, 83)
 speed = 0.0
 speedup = 0.0
 

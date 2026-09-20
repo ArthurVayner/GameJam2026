@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8llbssnk83ai"
-path="res://.godot/imported/bone4.png-2f30508cf6bc14ab004e08406065c17a.ctex"
+uid="uid://chxd0p02e4rdu"
+path="res://.godot/imported/bone 3.png-027ea23f5be845ecd1e580c235e67624.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Bone Animation/bone4.png"
-dest_files=["res://.godot/imported/bone4.png-2f30508cf6bc14ab004e08406065c17a.ctex"]
+source_file="res://Assets/Bone Animation/bone 3.png"
+dest_files=["res://.godot/imported/bone 3.png-027ea23f5be845ecd1e580c235e67624.ctex"]
 
 [params]
 
