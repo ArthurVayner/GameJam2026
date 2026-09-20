@@ -18,7 +18,3 @@ height = 4.0
 texture_filter = 1
 position = Vector2(1, -8)
 texture = ExtResource("4_ym18t")
-
-[node name="spawningCooldown" type="Timer" parent="." unique_id=656611743]
-
-[connection signal="timeout" from="spawningCooldown" to="Platform" method="_on_spawning_cooldown_timeout"]

@@ -35,6 +35,9 @@ var got_crown: bool = false
 var player_lose: bool = false
 var transitioning: bool = false
 
+func _ready() -> void:
+	pass
+
 func _physics_process(delta: float) -> void:
 	if transitioning:
 		velocity.x = -35
