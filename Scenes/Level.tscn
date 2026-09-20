@@ -14,7 +14,7 @@
 [node name="Platforms1" type="Node2D" parent="." unique_id=1009810866]
 
 [node name="Platform" parent="Platforms1" unique_id=1291661622 instance=ExtResource("1_0ba56")]
-position = Vector2(89, -615)
+position = Vector2(-19, -289)
 
 [node name="Platform2" parent="Platforms1" unique_id=1464590313 instance=ExtResource("1_0ba56")]
 position = Vector2(22, -972)
@@ -58,7 +58,7 @@ scale = Vector2(-1, 1)
 platform_texture = 1
 
 [node name="Platform15" parent="Platforms1" unique_id=317663659 instance=ExtResource("1_0ba56")]
-position = Vector2(67, -190)
+position = Vector2(81, -179)
 scale = Vector2(-1, 1)
 platform_texture = 1
 
@@ -130,7 +130,7 @@ scale = Vector2(-1, 1)
 platform_texture = 3
 
 [node name="Platform17" parent="Platforms2" unique_id=1595270490 instance=ExtResource("1_0ba56")]
-position = Vector2(88, -300)
+position = Vector2(66, -301)
 scale = Vector2(-1, 1)
 platform_texture = 3
 
@@ -248,11 +248,6 @@ platform_texture = 7
 
 [node name="Platform20" parent="Platforms4" unique_id=1769853610 instance=ExtResource("1_0ba56")]
 position = Vector2(-20, -701)
-scale = Vector2(-1, 1)
-platform_texture = 6
-
-[node name="Platform19" parent="Platforms4" unique_id=1261985513 instance=ExtResource("1_0ba56")]
-position = Vector2(-40, -301)
 scale = Vector2(-1, 1)
 platform_texture = 6
 
@@ -407,17 +402,16 @@ platform_texture = 4
 position = Vector2(-6, -246)
 platform_texture = 4
 
-[node name="BirdSpawnPlatform9" parent="Node2D" unique_id=435153454 instance=ExtResource("1_8rbpu")]
-position = Vector2(-3, -286)
-direction = -1
-platform_texture = 4
-
 [node name="BirdSpawnPlatform10" parent="Node2D" unique_id=1417558188 instance=ExtResource("1_8rbpu")]
 position = Vector2(-84, -473)
 bird_distance_from_platform = 150.0
 platform_texture = 4
 
-[node name="BirdSpawnPlatform" parent="." unique_id=547182852 instance=ExtResource("1_8rbpu")]
+[node name="BirdSpawnPlatform9" parent="Node2D" unique_id=1716594324 instance=ExtResource("1_8rbpu")]
+position = Vector2(72, -89)
+direction = -1
+
+[node name="BirdSpawnPlatform11" parent="Node2D" unique_id=1124907017 instance=ExtResource("1_8rbpu")]
 position = Vector2(-110, -182)
 direction = -1
 bird_distance_from_platform = 200.0
