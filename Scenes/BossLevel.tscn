@@ -387,10 +387,6 @@ theme_override_fonts/font = ExtResource("10_wq8ps")
 theme_override_font_sizes/font_size = 4
 text = "I  must  take  hi s  cr own"
 
-[node name="DeleteTS" parent="." unique_id=111879201 instance=ExtResource("2_uh2k4")]
-position = Vector2(-1519, -20)
-platform_texture = 8
-
 [node name="Boss" parent="." unique_id=858446088 instance=ExtResource("8_geoi6")]
 z_index = 1
 position = Vector2(-1559, 52)

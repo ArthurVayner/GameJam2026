@@ -68,14 +68,14 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461626614]
 shape = SubResource("RectangleShape2D_uh2k4")
 
-[node name="StunTimer" type="Timer" parent="." unique_id=1913667496]
-
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="." unique_id=778852630]
 stream = ExtResource("4_nn08x")
 volume_db = -8.538
 
 [node name="HitSFX" type="AudioStreamPlayer2D" parent="." unique_id=1025704872]
 stream = ExtResource("5_5ixxa")
+
+[node name="StunTimer" type="Timer" parent="." unique_id=1913667496]
 
 [node name="JumpBufferTimer" type="Timer" parent="." unique_id=913103936]
 one_shot = true
@@ -85,6 +85,9 @@ one_shot = true
 
 [node name="WinTransition" type="Timer" parent="." unique_id=323620025]
 
+[node name="BossTransition" type="Timer" parent="." unique_id=1804677101]
+
 [connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
 [connection signal="timeout" from="JumpBufferTimer" to="." method="_on_jump_buffer_timer_timeout"]
 [connection signal="timeout" from="WinTransition" to="." method="_on_win_transition_timeout"]
+[connection signal="timeout" from="BossTransition" to="." method="_on_boss_transition_timeout"]

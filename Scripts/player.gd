@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var jump_buffer_timer: Timer = $JumpBufferTimer
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var win_transition: Timer = $WinTransition
+@onready var boss_transition: Timer = $BossTransition
+
 
 
 @onready var player_icon: AnimatedSprite2D = $Icon
@@ -12,6 +14,9 @@ extends CharacterBody2D
 
 @onready var jump_sfx: AudioStreamPlayer2D = $JumpSFX
 @onready var hit_sfx: AudioStreamPlayer2D = $HitSFX
+
+
+
 
 @export var WALK_SPEED = 100.0
 @export var JUMP_VELOCITY = -320.0
@@ -28,11 +33,17 @@ var can_move: bool = true
 var is_moving: bool = false
 var got_crown: bool = false
 var player_lose: bool = false
+var transitioning: bool = false
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	if transitioning:
+		velocity.x = -35
+		player_gravity(delta)
+		move_and_slide()
+		return
 	if got_crown or player_lose:
 		return
 	if is_on_floor():
@@ -49,15 +60,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("jump"):
 			jump_buffer_timer.start(0.1)
 
-	var gravityMultiplier := 1.0
-	if velocity.y < 0 and not Input.is_action_pressed("jump"):
-		gravityMultiplier = heavy_gravity_multiplier
-	elif abs(velocity.y) < 20.0 and Input.is_action_pressed("jump"):
-		gravityMultiplier = 0.66
-
-	if not is_on_floor():
-		velocity += get_gravity() * delta * gravityMultiplier
-		velocity.y = min(velocity.y, terminal_velocity)
+	player_gravity(delta)
 
 	# Get the input direction. If we can't move, force it to 0.
 	var direction := Input.get_axis("go_left", "go_right") if can_move else 0.0
@@ -89,6 +92,16 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+func player_gravity(delta) -> void:
+	var gravityMultiplier := 1.0
+	if velocity.y < 0 and not Input.is_action_pressed("jump"):
+		gravityMultiplier = heavy_gravity_multiplier
+	elif abs(velocity.y) < 20.0 and Input.is_action_pressed("jump"):
+		gravityMultiplier = 0.66
+
+	if not is_on_floor():
+		velocity += get_gravity() * delta * gravityMultiplier
+		velocity.y = min(velocity.y, terminal_velocity)
 
 func player_stunned():
 	hit_sfx.play()
@@ -111,6 +124,12 @@ func give_knockback(value:Vector2) -> void:
 	
 
 
+func transition_to_boss() -> void:
+	transitioning = true
+	boss_transition.start(2)
+	player_icon.play("Walk")
+	can_move = false
+
 
 func game_win():
 	got_crown = true  #transition to winning screen
@@ -119,3 +138,7 @@ func game_win():
 
 func _on_win_transition_timeout() -> void:
 	get_tree().change_scene_to_file("res://Scenes/winning_scene.tscn")
+
+
+func _on_boss_transition_timeout() -> void:
+	get_tree().change_scene_to_file("res://Scenes/BossLevel.tscn")
