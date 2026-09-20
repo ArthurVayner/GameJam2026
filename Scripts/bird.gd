@@ -11,10 +11,10 @@ var speed = 140.0
 func set_direction() -> void:
 	sprite_2d.flip_h = direction == 1
 
-func spanBirdAwayFromPlayer(player_position: Vector2, distance: float, yPositionOffset: float)-> void:
+func spanBirdAwayFromPlayer(position: Vector2, distance: float, yPositionOffset: float)-> void:
 	direction = -sign(distance)
-	var yPosition = player_position.y + yPositionOffset
-	var xPosition = player_position.x + distance
+	var yPosition = position.y + yPositionOffset
+	var xPosition = position.x + distance
 	global_position = Vector2(xPosition, yPosition)
 	pass
 
