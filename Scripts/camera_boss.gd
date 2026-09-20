@@ -29,7 +29,7 @@ func _ready() -> void:
 	global_position.y = player.global_position.y
 
 func die():
-	print("11")
+	print("player has died")
 	get_tree().reload_current_scene()
 
 func calculatePosition(curent:float,target:float,delta:float) ->float:
