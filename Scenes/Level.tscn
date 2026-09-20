@@ -172,7 +172,7 @@ scale = Vector2(-1, 1)
 platform_texture = 6
 
 [node name="Bird" parent="." unique_id=896752602 instance=ExtResource("3_fuudy")]
-position = Vector2(-45, 128)
+position = Vector2(-152, 79)
 
 [node name="Wall" type="Sprite2D" parent="." unique_id=755569080]
 z_index = -1
