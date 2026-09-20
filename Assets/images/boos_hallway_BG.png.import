@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhfiomtc0xjib"
-path="res://.godot/imported/bird_new.png-f85b5cf7c32418d2f4eb257cfcec16f2.ctex"
+uid="uid://nkhlmjac1afs"
+path="res://.godot/imported/boos_hallway_BG.png-ab5cd1a7972c89b306529bbd460f65c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/bird_new.png"
-dest_files=["res://.godot/imported/bird_new.png-f85b5cf7c32418d2f4eb257cfcec16f2.ctex"]
+source_file="res://Assets/images/boos_hallway_BG.png"
+dest_files=["res://.godot/imported/boos_hallway_BG.png-ab5cd1a7972c89b306529bbd460f65c3.ctex"]
 
 [params]
 

@@ -1,8 +1,23 @@
 [gd_scene format=3 uid="uid://d0w1bn31ck55y"]
 
 [ext_resource type="Script" uid="uid://b2p0i77falbmd" path="res://Scripts/bird.gd" id="1_mcegt"]
-[ext_resource type="Texture2D" uid="uid://dhfiomtc0xjib" path="res://Assets/images/bird_new.png" id="2_dnvpi"]
+[ext_resource type="Texture2D" uid="uid://twkr7o0gnplk" path="res://Assets/Bird Animation/bird_flap1.png" id="2_vl8r2"]
 [ext_resource type="AudioStream" uid="uid://djm6qjf8oichg" path="res://Assets/Sounds/Bird_Tweet_Final.wav" id="3_dnvpi"]
+[ext_resource type="Texture2D" uid="uid://dcav817vus7yq" path="res://Assets/Bird Animation/bird_flap2.png" id="3_rr33m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vl8r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rr33m")
+}],
+"loop": 1,
+"name": &"Fly",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygmfd"]
 size = Vector2(12, 8)
@@ -11,8 +26,11 @@ size = Vector2(12, 8)
 texture_filter = 1
 script = ExtResource("1_mcegt")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=492606444]
-texture = ExtResource("2_dnvpi")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=929787365]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"Fly"
+autoplay = "Fly"
+frame_progress = 0.47312325
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653949590]
 shape = SubResource("RectangleShape2D_ygmfd")

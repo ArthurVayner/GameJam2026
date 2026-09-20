@@ -2,7 +2,8 @@ extends Area2D
 
 @onready var flapping_sound: AudioStreamPlayer2D = $FlappingSound
 @onready var flapping_sound_timer: Timer = $FlappingSoundTimer
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+
 
 var direction: int = 1
 var speed = 140.0
@@ -30,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		body.give_knockback(Vector2(350 * direction, -100))
+		body.give_knockback(Vector2(200 * direction, -100))
 		queue_free()
 
 func _on_falpping_sound_timer_timeout() -> void:

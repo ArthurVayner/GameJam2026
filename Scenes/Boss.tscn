@@ -15,7 +15,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_j5nlm")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Throw",
 "speed": 10.0
 }, {
@@ -36,7 +36,6 @@ texture_filter = 1
 position = Vector2(0.5, -25)
 sprite_frames = SubResource("SpriteFrames_doqcq")
 animation = &"Throw"
-frame_progress = 0.45953155
 
 [node name="Crown" parent="." unique_id=282216420 instance=ExtResource("2_smvyy")]
 position = Vector2(-1.5, -47)

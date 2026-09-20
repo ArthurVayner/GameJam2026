@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://252m6b3qm10q"
-path="res://.godot/imported/wall.png-daa49d5aab8e7d8f31108f1a388ea7a8.ctex"
+uid="uid://dcav817vus7yq"
+path="res://.godot/imported/bird_flap2.png-097d2dcd6f76d254b41f14f29f3ba026.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/wall.png"
-dest_files=["res://.godot/imported/wall.png-daa49d5aab8e7d8f31108f1a388ea7a8.ctex"]
+source_file="res://Assets/Bird Animation/bird_flap2.png"
+dest_files=["res://.godot/imported/bird_flap2.png-097d2dcd6f76d254b41f14f29f3ba026.ctex"]
 
 [params]
 

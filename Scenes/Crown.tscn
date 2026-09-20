@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2jcs7ec5hbfn"]
 
 [ext_resource type="Script" uid="uid://bx04w1j1cx7wk" path="res://Scripts/crown.gd" id="1_qoafd"]
+[ext_resource type="AudioStream" uid="uid://dc4atwlywcacv" path="res://Assets/Sounds/Bean_Win.wav" id="3_8fven"]
 [ext_resource type="AudioStream" uid="uid://cbxktsjoltgnm" path="res://Assets/Music/Boss_Music.wav" id="3_ctg82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
@@ -18,5 +19,8 @@ volume_db = -10.62
 autoplay = true
 
 [node name="WinSFX" type="AudioStreamPlayer" parent="." unique_id=355058128]
+stream = ExtResource("3_8fven")
+volume_db = -11.352
+stream_paused = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

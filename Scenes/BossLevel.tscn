@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://25rlnkcbu5tq"]
 
-[ext_resource type="Texture2D" uid="uid://d3xiepvxm1hgf" path="res://Assets/images/Boss_BG.png" id="1_1lweu"]
+[ext_resource type="Texture2D" uid="uid://qvtyut2c7gtm" path="res://Assets/images/Boss_BG_entry.png" id="1_geoi6"]
+[ext_resource type="Texture2D" uid="uid://nkhlmjac1afs" path="res://Assets/images/boos_hallway_BG.png" id="2_f6kao"]
 [ext_resource type="PackedScene" uid="uid://dtcf2dn0fgyae" path="res://Scenes/Platform.tscn" id="2_uh2k4"]
+[ext_resource type="Texture2D" uid="uid://cvpem18k4t8i2" path="res://Assets/images/Boss_BG_final.png" id="3_cfxsl"]
 [ext_resource type="PackedScene" uid="uid://b31r4030t1cl7" path="res://Scenes/Player.tscn" id="3_qxb48"]
+[ext_resource type="Texture2D" uid="uid://dc3qjw2ipqyws" path="res://Assets/images/Boss_Room_Border.png" id="4_cfxsl"]
 [ext_resource type="Script" uid="uid://cidvkxj27r6bj" path="res://Scripts/camera_boss.gd" id="4_f6kao"]
 [ext_resource type="PackedScene" uid="uid://cvy6xc5yvobad" path="res://Scenes/Boss.tscn" id="8_geoi6"]
 [ext_resource type="FontFile" uid="uid://cietqsorg0cbm" path="res://Assets/Pixel Font.ttf" id="10_wq8ps"]
@@ -10,49 +13,165 @@
 [node name="BossBg" type="Sprite2D" unique_id=1006416001]
 z_index = -1
 texture_filter = 1
-texture = ExtResource("1_1lweu")
+texture = ExtResource("1_geoi6")
 metadata/_edit_lock_ = true
 
-[node name="Node2D" type="Node2D" parent="." unique_id=396735062]
+[node name="BGs" type="Node2D" parent="." unique_id=396735062]
 position = Vector2(1, 0)
 
-[node name="BossBg" type="Sprite2D" parent="Node2D" unique_id=648568888]
+[node name="BossBg" type="Sprite2D" parent="BGs" unique_id=648568888]
 z_index = -1
 texture_filter = 1
 position = Vector2(-214, 0)
-texture = ExtResource("1_1lweu")
+texture = ExtResource("2_f6kao")
 metadata/_edit_lock_ = true
 
-[node name="BossBg2" type="Sprite2D" parent="Node2D" unique_id=1559833463]
+[node name="BossBg2" type="Sprite2D" parent="BGs" unique_id=1559833463]
 z_index = -1
 texture_filter = 1
 position = Vector2(-427, 0)
-texture = ExtResource("1_1lweu")
+texture = ExtResource("2_f6kao")
 metadata/_edit_lock_ = true
 
-[node name="BossBg3" type="Sprite2D" parent="Node2D" unique_id=1873226724]
+[node name="BossBg3" type="Sprite2D" parent="BGs" unique_id=1873226724]
 z_index = -1
 texture_filter = 1
 position = Vector2(-641, 0)
-texture = ExtResource("1_1lweu")
+texture = ExtResource("2_f6kao")
 metadata/_edit_lock_ = true
 
-[node name="BossBg4" type="Sprite2D" parent="Node2D" unique_id=1060842127]
+[node name="BossBg4" type="Sprite2D" parent="BGs" unique_id=1060842127]
 z_index = -1
 texture_filter = 1
 position = Vector2(-855, 0)
-texture = ExtResource("1_1lweu")
+texture = ExtResource("2_f6kao")
 metadata/_edit_lock_ = true
 
-[node name="BossBg5" type="Sprite2D" parent="Node2D" unique_id=942955415]
+[node name="BossBg5" type="Sprite2D" parent="BGs" unique_id=942955415]
 z_index = -1
 texture_filter = 1
 position = Vector2(-1069, 0)
-texture = ExtResource("1_1lweu")
+texture = ExtResource("2_f6kao")
 metadata/_edit_lock_ = true
 
+[node name="BossBg6" type="Sprite2D" parent="BGs" unique_id=2096478341]
+z_index = -1
+texture_filter = 1
+position = Vector2(-1283, 0)
+texture = ExtResource("2_f6kao")
+metadata/_edit_lock_ = true
+
+[node name="BossBg7" type="Sprite2D" parent="BGs" unique_id=941050894]
+z_index = -1
+texture_filter = 1
+position = Vector2(-1497, 0)
+texture = ExtResource("3_cfxsl")
+metadata/_edit_lock_ = true
+
+[node name="BossRoomBorder" type="Sprite2D" parent="BGs" unique_id=1377125805]
+position = Vector2(-1497, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder2" type="Sprite2D" parent="BGs" unique_id=843551304]
+position = Vector2(-1711, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder3" type="Sprite2D" parent="BGs" unique_id=232793809]
+z_index = -1
+position = Vector2(-1676, 18)
+rotation = -1.5707964
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder4" type="Sprite2D" parent="BGs" unique_id=167278008]
+position = Vector2(-642, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder5" type="Sprite2D" parent="BGs" unique_id=72614282]
+position = Vector2(-856, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder6" type="Sprite2D" parent="BGs" unique_id=2066424692]
+position = Vector2(-1070, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder7" type="Sprite2D" parent="BGs" unique_id=1768849288]
+position = Vector2(-1284, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder8" type="Sprite2D" parent="BGs" unique_id=1203339821]
+position = Vector2(-428, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder9" type="Sprite2D" parent="BGs" unique_id=29651600]
+position = Vector2(-214, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder10" type="Sprite2D" parent="BGs" unique_id=1666470449]
+position = Vector2(-1, -144)
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder11" type="Sprite2D" parent="BGs" unique_id=425070276]
+position = Vector2(-1497, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder12" type="Sprite2D" parent="BGs" unique_id=2083713696]
+position = Vector2(-1283, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder13" type="Sprite2D" parent="BGs" unique_id=748525115]
+position = Vector2(-1069, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder14" type="Sprite2D" parent="BGs" unique_id=1331968962]
+position = Vector2(-855, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder15" type="Sprite2D" parent="BGs" unique_id=747944497]
+position = Vector2(-641, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder16" type="Sprite2D" parent="BGs" unique_id=1833535822]
+position = Vector2(-427, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder17" type="Sprite2D" parent="BGs" unique_id=428053923]
+position = Vector2(-213, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder18" type="Sprite2D" parent="BGs" unique_id=1143546484]
+position = Vector2(1, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder19" type="Sprite2D" parent="BGs" unique_id=1929175468]
+z_index = -1
+position = Vector2(178, 20)
+rotation = 1.5707964
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder20" type="Sprite2D" parent="BGs" unique_id=77181419]
+position = Vector2(-1711, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder21" type="Sprite2D" parent="BGs" unique_id=2083097900]
+position = Vector2(213, 144)
+rotation = 3.1415927
+texture = ExtResource("4_cfxsl")
+
+[node name="BossRoomBorder22" type="Sprite2D" parent="BGs" unique_id=1621635419]
+position = Vector2(213, -144)
+texture = ExtResource("4_cfxsl")
+
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("3_qxb48")]
-position = Vector2(-1528, -28)
+position = Vector2(-1473, -31)
 WALK_SPEED = 75.0
 JUMP_VELOCITY = -250.0
 
@@ -236,58 +355,6 @@ platform_texture = 9
 position = Vector2(562, -34)
 platform_texture = 9
 
-[node name="BackGrounds" type="Node2D" parent="." unique_id=750479074]
-position = Vector2(1, 0)
-
-[node name="BossBg6" type="Sprite2D" parent="BackGrounds" unique_id=659860260]
-z_index = -1
-texture_filter = 1
-position = Vector2(-1283, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
-[node name="BossBg7" type="Sprite2D" parent="BackGrounds" unique_id=193998529]
-z_index = -1
-texture_filter = 1
-position = Vector2(-1497, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
-[node name="BossBg" type="Sprite2D" parent="BackGrounds" unique_id=1639715703]
-z_index = -1
-texture_filter = 1
-position = Vector2(-214, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
-[node name="BossBg2" type="Sprite2D" parent="BackGrounds" unique_id=660239625]
-z_index = -1
-texture_filter = 1
-position = Vector2(-427, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
-[node name="BossBg3" type="Sprite2D" parent="BackGrounds" unique_id=1258825606]
-z_index = -1
-texture_filter = 1
-position = Vector2(-641, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
-[node name="BossBg4" type="Sprite2D" parent="BackGrounds" unique_id=1163471399]
-z_index = -1
-texture_filter = 1
-position = Vector2(-855, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
-[node name="BossBg5" type="Sprite2D" parent="BackGrounds" unique_id=1449080309]
-z_index = -1
-texture_filter = 1
-position = Vector2(-1069, 0)
-texture = ExtResource("1_1lweu")
-metadata/_edit_lock_ = true
-
 [node name="Instruction" type="Label" parent="." unique_id=204838312]
 z_index = 1
 offset_left = 9.0
@@ -299,7 +366,7 @@ theme_override_font_sizes/font_size = 4
 text = "I  must  take  hi s  cr own"
 
 [node name="DeleteTS" parent="." unique_id=111879201 instance=ExtResource("2_uh2k4")]
-position = Vector2(-1528, -17)
+position = Vector2(-1473, -20)
 platform_texture = 8
 
 [node name="Boss" parent="." unique_id=858446088 instance=ExtResource("8_geoi6")]

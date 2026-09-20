@@ -19,26 +19,25 @@ position = Vector2(-10, -75)
 
 [node name="Border" parent="." unique_id=483146374 instance=ExtResource("6_v1gob")]
 position = Vector2(-6, 83)
-speed = 0.0
-speedup = 0.0
+max_speed = 0.2
 
 [node name="Player" parent="." unique_id=2015687368 instance=ExtResource("5_pbw6q")]
-position = Vector2(-4, -487)
+position = Vector2(-1, 47)
 
 [node name="BirdTimer" type="Timer" parent="." unique_id=845522088]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1032428525]
-offset_left = 96.0
-offset_top = 15.0
-offset_right = 210.0
-offset_bottom = 33.0
+offset_left = -90.0
+offset_top = 22.0
+offset_right = 78.0
+offset_bottom = 40.0
 theme_override_font_sizes/normal_font_size = 10
 theme_override_font_sizes/bold_font_size = 16
 theme_override_font_sizes/bold_italics_font_size = 16
 theme_override_font_sizes/italics_font_size = 16
 theme_override_font_sizes/mono_font_size = 16
 bbcode_enabled = true
-text = "[wave][font=uid://cietqsorg0cbm]PRESS TO START"
+text = "[wave][font=uid://cietqsorg0cbm]PRESS ENTER TO START"
 
 [connection signal="timeout" from="FallingObjTimer" to="." method="_on_falling_obj_timer_timeout"]
 [connection signal="timeout" from="BirdTimer" to="." method="_on_bird_timer_timeout"]
