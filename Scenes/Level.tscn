@@ -409,7 +409,6 @@ shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="BossTransition" type="AudioStreamPlayer" parent="." unique_id=772537108]
 stream = ExtResource("10_133si")
-volume_db = -5.493
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1164516970]
 stream = ExtResource("11_esopp")
