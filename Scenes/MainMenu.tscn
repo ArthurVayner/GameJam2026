@@ -42,6 +42,7 @@ position = Vector2(0, -59)
 
 [node name="Platform8" parent="BG" unique_id=1291661622 instance=ExtResource("2_df05h")]
 position = Vector2(-42, 87)
+platform_texture = 1
 
 [node name="Platform2" parent="BG" unique_id=367094922 instance=ExtResource("2_df05h")]
 position = Vector2(-79, 11)
