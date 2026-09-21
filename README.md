@@ -1,4 +1,4 @@
-The Magic Bean Crown (Game Jam 2026)
+The Magic Bean Crown
 
 A Gameboy-inspired platformer created for GBJAM14 - Game Jam 2026. 
 
