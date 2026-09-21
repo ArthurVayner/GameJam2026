@@ -50,6 +50,6 @@ func _on_throwing_obj_timer_timeout() -> void:
 func _on_throwing_obj_timer_2_timeout() -> void:
 	if boss_can_throw:
 		object_spawn()
-		var throwing_object_interval: float = [1.5].pick_random()
+		var throwing_object_interval: float = [1.35].pick_random()
 		throwing_obj_timer_2.start(throwing_object_interval)
 	
