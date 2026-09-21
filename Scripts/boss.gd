@@ -21,7 +21,7 @@ var boss_can_throw = true
 func _ready() -> void:
 	
 	throwing_obj_timer.start(1)
-	throwing_obj_timer_2.start(1.5)
+	throwing_obj_timer_2.start(1.35)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
