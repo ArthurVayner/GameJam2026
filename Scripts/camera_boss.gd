@@ -6,8 +6,6 @@ extends Camera2D
 
 
 
-@onready var platform_to_delete1: StaticBody2D = $"../../Platforms to delete/Platform"
-@onready var platform_to_delete2: StaticBody2D = $"../../Platforms to delete/Platform2"
 @onready var remove_label_timer: Timer = $"../RemoveLabel"
 
 
@@ -19,7 +17,7 @@ const maxLeft = -195
 const maxRight = 140
 const camera_y_offset = 10
 const camera_x_offset = -2.5
-const camera_acceleration = 0.0009
+const camera_acceleration = 9.0
 
 var camera_speed = 0
 var is_cutscene: bool = true
@@ -42,12 +40,10 @@ func calculatePosition(curent:float,target:float,delta:float) ->float:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_cutscene:
-		global_position.x += camera_speed
-		camera_speed += camera_acceleration
+		global_position.x += camera_speed * delta
+		camera_speed += camera_acceleration * delta
 		if global_position.x >= player.position.x:
 			is_cutscene = false
-			#platform_to_delete1.queue_free()
-			#platform_to_delete2.queue_free()
 			remove_label_timer.start(2)
 	else:
 		var fallowPlayerPosition = calculatePosition(global_position.x, player.global_position.x, delta)

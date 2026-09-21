@@ -367,9 +367,6 @@ position = Vector2(70, 14)
 scale = Vector2(2.1599998, 1)
 platform_texture = 9
 
-[node name="Platforms to delete" type="Node2D" parent="." unique_id=2047864158]
-position = Vector2(-481, 27)
-
 [node name="Instruction" type="Label" parent="." unique_id=204838312]
 z_index = 1
 offset_left = 9.0
