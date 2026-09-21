@@ -16,7 +16,7 @@ Controls
 
 Features
 * **Retro Aesthetic:** Authentic Gameboy pixel art style and green-tinted palette.
-* **Instant Play:** Fully playable directly in your web browser (Windows and Linux builds also available on itch.io).
+* **Instant Play:** Fully playable directly in your web browser (Windows and Linux builds also available on [itch.io](https://pipinrippin.itch.io/golden-bean-king)).
 * **Modern Engine:** Powered by Godot 4.
 
 Credits
