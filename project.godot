@@ -13,7 +13,8 @@ config_version=5
 config/name="GameJab2026"
 run/main_scene="uid://bxfp7fxq17psp"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://GameJab2026/icon.svg"
+boot_splash/show_image=false
+config/icon="uid://bkajax3br2756"
 
 [autoload]
 
